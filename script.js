@@ -11,6 +11,12 @@ const answers = document.getElementById("answers");
 let correctAnswers = 0;
 let chosenQuestions = [];
 
+if (url[0] === "/northernterritory") {
+  chosenQuestions = NorthernTerritoryQuestions;
+} else {
+  chosenQuestions = QueenslandQuestions;
+}
+
 function startQuiz() {
   quizBtn.remove();
 
