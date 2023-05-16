@@ -21,7 +21,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -119,7 +119,7 @@ main {
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
   height: 100%;
   padding: 1rem;
 }
@@ -147,6 +147,9 @@ main {
   width: 30%;
   border-radius: 50%;
   aspect-ratio: 1;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
 .badge-container :nth-child(1) {
@@ -157,15 +160,6 @@ main {
 }
 .badge-container :nth-child(3) {
   border: 8px solid gold;
-}
-
-.crest-container {
-  width: 250px;
-}
-
-.crest-container img {
-  width: 100%;
-  object-fit: contain;
 }
 
 .map {
@@ -189,6 +183,15 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.crest-container {
+  max-width: 200px;
+}
+
+.crest-container img {
+  width: 100%;
+  object-fit: contain;
 }
 
 /* QUESTIONS */

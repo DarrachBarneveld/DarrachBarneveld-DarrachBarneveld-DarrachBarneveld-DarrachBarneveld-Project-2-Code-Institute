@@ -87,14 +87,53 @@ export const NSWQuestions = [
   },
   {
     question:
-      "What is a distinctive physical feature of male Sydney funnel-web spiders?",
+      "Which of the following Australian bandicoot species is considered critically endangered?",
     answers: [
       "Brightly colored abdomen",
       "Long, slender legs",
       "Prominent fangs",
       "Large, intricate webs",
     ],
-    correct: "Prominent fangs",
+    correct: "Eastern barred bandicoot",
     badge: "funnel-web",
+  },
+];
+
+export const VICQuestions = [
+  {
+    question:
+      "Which of the following Australian possum species is known for its gliding ability?",
+    answers: [
+      "Greater glider",
+      "Sugar glider",
+      "Ringtail possum",
+      "Common brushtail possum",
+    ],
+    correct: "Sugar glider",
+    badge: "possum",
+  },
+  {
+    question:
+      "What is the unique adaptation of wombats that helps them defend against predators?",
+    answers: [
+      "Sharp claws for climbing trees",
+      "Camouflage fur patterns",
+      "Ability to emit toxic secretions",
+      "Powerful rear end and solid bony plates",
+    ],
+    correct: "Powerful rear end and solid bony plates",
+    badge: "wombat",
+  },
+  {
+    question:
+      "What is a distinctive physical feature of male Sydney funnel-web spiders?",
+    answers: [
+      "Northern brown bandicoot",
+      "Brush-tailed bettong",
+      "Eastern barred bandicoot",
+      "Long-nosed bandicoot",
+    ],
+    correct: "Eastern barred bandicoot",
+    badge: "bandicoot",
   },
 ];
