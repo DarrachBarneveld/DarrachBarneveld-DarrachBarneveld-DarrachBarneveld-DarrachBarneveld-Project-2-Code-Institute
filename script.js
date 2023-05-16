@@ -150,4 +150,27 @@ function delayTimer(delay) {
   });
 }
 
+function storeBadges(badges) {
+  let currentBadges = JSON.parse(localStorage.getItem("badges"));
+
+  if (!currentBadges) {
+    localStorage.setItem("badges", JSON.stringify(badges));
+  } else {
+    const uniqueArr = checkTwoArraysForMatch(badges, currentBadges);
+    localStorage.setItem("badges", JSON.stringify(uniqueArr));
+  }
+}
+
+function checkTwoArraysForMatch(arr1, arr2) {
+  const totalArr = [...arr1, ...arr2];
+  const uniqueArr = [];
+  totalArr.forEach(function (str) {
+    if (!uniqueArr.includes(str)) {
+      uniqueArr.push(str);
+    }
+  });
+
+  return uniqueArr;
+}
+
 quizBtn.addEventListener("click", startQuiz);
