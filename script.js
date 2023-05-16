@@ -17,6 +17,18 @@ if (url[0] === "/northernterritory") {
   chosenQuestions = QueenslandQuestions;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  let currentBadges = JSON.parse(localStorage.getItem("badges"));
+  const images = document
+    .querySelector(".badge-container")
+    .querySelectorAll("img");
+
+  if (!currentBadges) return;
+  else {
+    changeImageSrc(currentBadges, images);
+  }
+});
+
 function startQuiz() {
   quizBtn.remove();
 
