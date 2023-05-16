@@ -1,6 +1,7 @@
 import {
   QueenslandQuestions,
   NorthernTerritoryQuestions,
+  NSWQuestions,
 } from "./questions.js";
 
 const question = document.getElementById("question");
@@ -15,6 +16,9 @@ const url = window.location.pathname.split(".");
 
 if (url[0] === "/northernterritory") {
   chosenQuestions = NorthernTerritoryQuestions;
+}
+if (url[0] === "/nsw") {
+  chosenQuestions = NSWQuestions;
 } else {
   chosenQuestions = QueenslandQuestions;
 }
