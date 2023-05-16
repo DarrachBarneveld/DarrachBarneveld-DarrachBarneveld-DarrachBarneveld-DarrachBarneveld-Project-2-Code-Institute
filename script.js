@@ -38,6 +38,22 @@ async function nextQuestion(i) {
   });
 }
 
+async function checkAnswer(e, i) {
+  const answer = e.target.textContent;
+
+  if (answer === chosenQuestions[i].correct) {
+    e.target.style.background = "green";
+    correctAnswers++;
+
+    await delayTimer(500);
+    nextQuestion(i + 1);
+  } else {
+    e.target.style.background = "red";
+    await delayTimer(500);
+    nextQuestion(i + 1);
+  }
+}
+
 // HELPER FUNCTIONS
 
 function delayTimer(delay) {
