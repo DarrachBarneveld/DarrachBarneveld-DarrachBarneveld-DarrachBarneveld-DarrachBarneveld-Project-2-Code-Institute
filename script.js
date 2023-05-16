@@ -8,6 +8,9 @@ const questionContainer = document.querySelector(".question-container");
 const quizBtn = document.getElementById("quizbtn");
 const answers = document.getElementById("answers");
 
+let correctAnswers = 0;
+let chosenQuestions = [];
+
 function startQuiz() {
   quizBtn.remove();
 
