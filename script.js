@@ -128,6 +128,7 @@ function endQuiz() {
   const badgesArr = chosenQuestions.map((question) => question.badge);
 
   storeBadges(badgesArr.slice(0, correctAnswers));
+  correctAnswers = 0;
 }
 
 async function checkAnswer(e, i) {

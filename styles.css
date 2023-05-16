@@ -159,9 +159,13 @@ main {
   border: 8px solid gold;
 }
 
-#crest {
-  border-radius: 50%;
-  border: 5px solid rgb(181, 155, 9);
+.crest-container {
+  width: 250px;
+}
+
+.crest-container img {
+  width: 100%;
+  object-fit: contain;
 }
 
 .map {
