@@ -185,4 +185,15 @@ function checkTwoArraysForMatch(arr1, arr2) {
   return uniqueArr;
 }
 
+function changeImageSrc(array, images) {
+  images.forEach(function (image) {
+    let { set } = image.dataset;
+    if (array.includes(set)) {
+      let newSrc = `assets/images/${set}.jpg`;
+      image.src = newSrc;
+    }
+  });
+}
+
+//   EVENT LISTENERS
 quizBtn.addEventListener("click", startQuiz);
