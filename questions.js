@@ -65,3 +65,36 @@ export const NorthernTerritoryQuestions = [
     badge: "cane-toad",
   },
 ];
+
+export const NSWQuestions = [
+  {
+    question: "How many stomach compartments do koalas have?",
+    answers: ["One", "Two", "Three", "Four"],
+    correct: "Two",
+    badge: "koala",
+  },
+  {
+    question: "What was the Emu War?",
+    answers: [
+      "A conflict between emus and kangaroos over territory.",
+      "A military operation to control the population of emus in Australia.",
+      "A sporting event involving emu racing and competition.",
+      "A fictional war depicted in a popular Australian novel.",
+    ],
+    correct:
+      "A military operation to control the population of emus in Australia.",
+    badge: "emu",
+  },
+  {
+    question:
+      "What is a distinctive physical feature of male Sydney funnel-web spiders?",
+    answers: [
+      "Brightly colored abdomen",
+      "Long, slender legs",
+      "Prominent fangs",
+      "Large, intricate webs",
+    ],
+    correct: "Prominent fangs",
+    badge: "funnel-web",
+  },
+];
