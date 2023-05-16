@@ -63,6 +63,83 @@ async function checkAnswer(e, i) {
   }
 }
 
+function endQuiz() {
+  let html;
+
+  if (correctAnswers === 0) {
+    html = `<h3>Better luck next time</h3>`;
+    questionContainer.innerHTML = html;
+
+    return;
+  }
+  if (correctAnswers === 1) {
+    html = `
+      <h3>You Won!</h3>
+      <div class="badge-container">
+      <img
+        class="badge"
+        src="assets/images/${chosenQuestions[0].badge}.jpg"
+        alt="picture of a ${chosenQuestions[0].badge}"
+      />
+    </div>`;
+  }
+  if (correctAnswers === 2) {
+    html = `
+      <h3>You Won!</h3>
+      <div class="badge-container">
+      <img
+        class="badge"
+        src="assets/images/${chosenQuestions[0].badge}.jpg"
+        alt="picture of a ${chosenQuestions[0].badge}"
+      />
+      <img
+        class="badge"
+        src="assets/images/${chosenQuestions[1].badge}.jpg"
+        alt="picture of a ${chosenQuestions[1].badge}"
+      />
+    </div>`;
+  }
+  if (correctAnswers === 3) {
+    html = `
+      <h3>You Won!</h3>
+      <div class="badge-container">
+      <img
+        class="badge"
+        src="assets/images/${chosenQuestions[0].badge}.jpg"
+        alt="picture of a ${chosenQuestions[0].badge}"
+      />
+      <img
+        class="badge"
+        src="assets/images/${chosenQuestions[1].badge}.jpg"
+        alt="picture of a ${chosenQuestions[1].badge}"
+      />
+      <img
+        class="badge"
+        src="assets/images/${chosenQuestions[2].badge}.jpg"
+        alt="picture of a ${chosenQuestions[2].badge}"
+      />
+    </div>`;
+  }
+
+  questionContainer.innerHTML = html;
+}
+
+async function checkAnswer(e, i) {
+  const answer = e.target.textContent;
+
+  if (answer === chosenQuestions[i].correct) {
+    e.target.style.background = "green";
+    correctAnswers++;
+
+    await delayTimer(500);
+    nextQuestion(i + 1);
+  } else {
+    e.target.style.background = "red";
+    await delayTimer(500);
+    nextQuestion(i + 1);
+  }
+}
+
 // HELPER FUNCTIONS
 
 function delayTimer(delay) {
