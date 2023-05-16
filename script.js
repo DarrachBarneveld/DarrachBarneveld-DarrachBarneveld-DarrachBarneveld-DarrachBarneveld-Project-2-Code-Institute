@@ -59,22 +59,6 @@ async function nextQuestion(i) {
   });
 }
 
-async function checkAnswer(e, i) {
-  const answer = e.target.textContent;
-
-  if (answer === chosenQuestions[i].correct) {
-    e.target.style.background = "green";
-    correctAnswers++;
-
-    await delayTimer(500);
-    nextQuestion(i + 1);
-  } else {
-    e.target.style.background = "red";
-    await delayTimer(500);
-    nextQuestion(i + 1);
-  }
-}
-
 function endQuiz() {
   let html;
 
@@ -134,6 +118,10 @@ function endQuiz() {
   }
 
   questionContainer.innerHTML = html;
+
+  const badgesArr = chosenQuestions.map((question) => question.badge);
+
+  storeBadges(badgesArr.slice(0, correctAnswers));
 }
 
 async function checkAnswer(e, i) {
