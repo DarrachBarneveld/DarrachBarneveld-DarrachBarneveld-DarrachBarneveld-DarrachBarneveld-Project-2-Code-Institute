@@ -11,6 +11,8 @@ const answers = document.getElementById("answers");
 let correctAnswers = 0;
 let chosenQuestions = [];
 
+const url = window.location.pathname.split(".");
+
 if (url[0] === "/northernterritory") {
   chosenQuestions = NorthernTerritoryQuestions;
 } else {
