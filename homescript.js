@@ -6,6 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const badgeElement = document.getElementById("total-badges");
     const totalbadges = currentBadges.length;
 
-    badgeElement.textContent = totalbadges;
+    badgeElement.textContent = `${totalbadges}/21`;
   }
 });

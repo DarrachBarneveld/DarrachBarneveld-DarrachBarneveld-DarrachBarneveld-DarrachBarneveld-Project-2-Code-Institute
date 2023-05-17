@@ -187,7 +187,6 @@ function checkTwoArraysForMatch(arr1, arr2) {
       uniqueArr.push(str);
     }
   });
-
   return uniqueArr;
 }
 
