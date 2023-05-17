@@ -7,6 +7,7 @@
   --orange: #e36927;
   --purple: #803788;
   --sky: #66b9de;
+  --off-black: #111111;
   --btn-box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
@@ -25,6 +26,7 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
+  color: var(--off-black);
 }
 
 /* HEADER */
@@ -227,4 +229,77 @@ main {
 .btn:hover {
   cursor: pointer;
   filter: brightness(1.4);
+}
+
+/* BADGES */
+
+.badge-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+}
+
+.badge-box:nth-child(1) {
+  border: 5px solid var(--orange);
+  background-color: #f39f86;
+  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+}
+.badge-box:nth-child(2) {
+  border: 5px solid var(--purple);
+  background-color: var(--purple);
+  background-image: linear-gradient(315deg, var(--purple) 0%, #a88beb 74%);
+}
+
+.badge-box:nth-child(3) {
+  border: 5px solid var(--green);
+  background-color: var(--green);
+  background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%);
+}
+
+.badge-box:nth-child(4) {
+  border: 5px solid var(--yellow);
+  background-color: var(--yellow);
+  background-image: linear-gradient(315deg, var(--yellow) 0%, #ffdd00 74%);
+}
+
+.badge-box:nth-child(5) {
+  border: 5px solid var(--blue);
+  background-color: var(--blue);
+  background-image: linear-gradient(315deg, var(--blue) 0%, #009ffd 74%);
+}
+
+.badge-box:nth-child(6) {
+  border: 5px solid var(--red);
+  background-color: var(--red);
+  background-image: linear-gradient(315deg, var(--red) 0%, #a71d31 74%);
+}
+
+.badge-box:nth-child(7) {
+  border: 5px solid var(--sky);
+  background-color: var(--sky);
+  background-image: linear-gradient(315deg, var(--sky) 0%, #3eadcf 74%);
+}
+
+.badge-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: whitesmoke;
+}
+
+.state-title {
+  font-size: 1.2rem;
+}
+
+.tropy-crest {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  aspect-ratio: 1/1;
 }
