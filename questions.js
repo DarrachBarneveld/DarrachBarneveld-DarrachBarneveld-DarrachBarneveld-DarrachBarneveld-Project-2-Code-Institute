@@ -198,7 +198,7 @@ export const WAQuestions = [
       "What is the average number of teeth a great white shark can have in its mouth at any given time?",
     answers: ["50", "100", "300", "500"],
     correct: "300",
-    badge: "white-shark",
+    badge: "great-white",
   },
 ];
 
