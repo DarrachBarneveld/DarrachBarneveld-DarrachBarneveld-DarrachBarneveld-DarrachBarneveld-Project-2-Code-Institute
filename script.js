@@ -3,6 +3,9 @@ import {
   NorthernTerritoryQuestions,
   NSWQuestions,
   VICQuestions,
+  TAZQuestions,
+  WAQuestions,
+  SAQuestions,
 } from "./questions.js";
 
 const question = document.getElementById("question");
@@ -15,12 +18,18 @@ let chosenQuestions = [];
 
 const url = window.location.pathname.split(".");
 
-if (url[0] === "/northernterritory") {
+if (url[0] === "/nt") {
   chosenQuestions = NorthernTerritoryQuestions;
 } else if (url[0] === "/nsw") {
   chosenQuestions = NSWQuestions;
 } else if (url[0] === "/vic") {
   chosenQuestions = VICQuestions;
+} else if (url[0] === "/sa") {
+  chosenQuestions = SAQuestions;
+} else if (url[0] === "/wa") {
+  chosenQuestions = WAQuestions;
+} else if (url[0] === "/taz") {
+  chosenQuestions = TAZQuestions;
 } else {
   chosenQuestions = QueenslandQuestions;
 }
@@ -186,7 +195,7 @@ function changeImageSrc(array, images) {
   images.forEach(function (image) {
     let { set } = image.dataset;
     if (array.includes(set)) {
-      let newSrc = `assets/images/${set}.jpg`;
+      let newSrc = `assets/images/animals/${set}.jpg`;
       image.src = newSrc;
     }
   });
