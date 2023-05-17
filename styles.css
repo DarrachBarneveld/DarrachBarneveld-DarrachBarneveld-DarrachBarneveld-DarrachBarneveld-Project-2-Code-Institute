@@ -138,6 +138,8 @@ body {
   border: 3px solid var(--off-black);
   border-radius: 10px;
   box-shadow: var(--primary-shadow);
+  background-color: #f8f9d2;
+  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
 }
 
 .score-title {
@@ -166,6 +168,10 @@ body {
   gap: 2rem;
   padding: 0.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.score-badges-container i {
+  color: var(--off-black);
 }
 /* MAP STATES */
 
