@@ -137,3 +137,101 @@ export const VICQuestions = [
     badge: "bandicoot",
   },
 ];
+
+export const SAQuestions = [
+  {
+    question: "Which of the following statements about echidnas is correct?",
+    answers: [
+      "Capable of regenerating lost limbs",
+      "Exceptional hearing abilities",
+      "Prehensile tail for gripping branches",
+      "One of the few egg-laying mammals",
+    ],
+    correct: "One of the few egg-laying mammals",
+    badge: "echidna",
+  },
+  {
+    question: "What is a distinctive feature of platypus?",
+    answers: [
+      "Ability to fly short distances",
+      "Long, prehensile tail",
+      "Venomous spurs on their hind legs",
+      "Highly developed echolocation abilities",
+    ],
+    correct: "Venomous spurs on their hind legs",
+    badge: "platypus",
+  },
+  {
+    question: "What is the gestation period of kangaroos?",
+    answers: ["2 months", "6 months", "12 months", "18 months"],
+    correct: "18 months",
+    badge: "kangaroo",
+  },
+];
+
+export const WAQuestions = [
+  {
+    question: "Quokkas are endemic to which specific island in Australia?",
+    answers: [
+      "Kangaroo Island",
+      "Fraser Island",
+      "Rottnest Island",
+      "Tasmania",
+    ],
+    correct: "Rottnest Island",
+    badge: "quokka",
+  },
+  {
+    question:
+      "Where is the primary breeding and rookery location for Australian sea lions?",
+    answers: [
+      "Ningaloo Coast",
+      "Sydney Harbour",
+      "Kangaroo Island",
+      "Christmas Island",
+    ],
+    correct: "Kangaroo Island",
+    badge: "sea-lion",
+  },
+  {
+    question:
+      "What is the average number of teeth a great white shark can have in its mouth at any given time?",
+    answers: ["50", "100", "300", "500"],
+    correct: "300",
+    badge: "white-shark",
+  },
+];
+
+export const TAZQuestions = [
+  {
+    question:
+      "Which of the following statements about huntsman spiders is correct?",
+    answers: [
+      "Venomous and pose a significant threat to humans",
+      "Aggressive behavior and frequent biting",
+      "Elaborate webs to catch their prey",
+      "Large size and swift movements",
+    ],
+    correct: "Large size and swift movements",
+    badge: "huntsman",
+  },
+  {
+    question:
+      "What is the main threat to the survival of Tasmanian devils in the wild?",
+    answers: [
+      "Devil facial tumor disease",
+      "Loss of habitat due to deforestation",
+      "Competition with other carnivorous mammals",
+      "Overhunting by humans",
+    ],
+    correct: "Devil facial tumor disease",
+    badge: "taz-devil",
+  },
+  {
+    question:
+      "When was the last confirmed sighting of a thylacine in the wild?",
+    answers: ["1920s", "1940s", "1960s", "1980s"],
+    correct: "1920s",
+    badge: "thylacine",
+  },
+];
