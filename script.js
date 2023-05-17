@@ -91,7 +91,7 @@ function endQuiz() {
       <div class="badge-container">
       <img
         class="badge"
-        src="assets/images/${chosenQuestions[0].badge}.jpg"
+        src="assets/images/animals/${chosenQuestions[0].badge}.jpg"
         alt="picture of a ${chosenQuestions[0].badge}"
       />
     </div>`;
@@ -102,12 +102,12 @@ function endQuiz() {
       <div class="badge-container">
       <img
         class="badge"
-        src="assets/images/${chosenQuestions[0].badge}.jpg"
+        src="assets/images/animals/${chosenQuestions[0].badge}.jpg"
         alt="picture of a ${chosenQuestions[0].badge}"
       />
       <img
         class="badge"
-        src="assets/images/${chosenQuestions[1].badge}.jpg"
+        src="assets/images/animals/${chosenQuestions[1].badge}.jpg"
         alt="picture of a ${chosenQuestions[1].badge}"
       />
     </div>`;
@@ -118,17 +118,17 @@ function endQuiz() {
       <div class="badge-container">
       <img
         class="badge"
-        src="assets/images/${chosenQuestions[0].badge}.jpg"
+        src="assets/images/animals/${chosenQuestions[0].badge}.jpg"
         alt="picture of a ${chosenQuestions[0].badge}"
       />
       <img
         class="badge"
-        src="assets/images/${chosenQuestions[1].badge}.jpg"
+        src="assets/images/animals/${chosenQuestions[1].badge}.jpg"
         alt="picture of a ${chosenQuestions[1].badge}"
       />
       <img
         class="badge"
-        src="assets/images/${chosenQuestions[2].badge}.jpg"
+        src="assets/images/animals/${chosenQuestions[2].badge}.jpg"
         alt="picture of a ${chosenQuestions[2].badge}"
       />
     </div>`;

@@ -9,3 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
     badgeElement.textContent = `${totalbadges}/21`;
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {});
