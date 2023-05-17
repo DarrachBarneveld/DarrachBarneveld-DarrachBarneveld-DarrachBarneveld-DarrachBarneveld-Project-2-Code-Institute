@@ -3,9 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!currentBadges) return;
   else {
-    const badgeElement = document.getElementById("total-badges");
-    const totalbadges = currentBadges.length;
+    const badgeImages = Array.from(document.querySelectorAll(".badge"));
 
-    badgeElement.textContent = totalbadges;
+    badgeImages.forEach((badge) => {
+      const { set } = badge.dataset;
+      if (currentBadges.includes(set)) {
+        let newSrc = `assets/images/animals/${set}.jpg`;
+        badge.src = newSrc;
+      }
+    });
   }
 });
