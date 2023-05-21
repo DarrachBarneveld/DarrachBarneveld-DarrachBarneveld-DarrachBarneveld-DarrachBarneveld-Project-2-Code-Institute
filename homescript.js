@@ -1,11 +1,3 @@
-// const NSWStars = document.getElementById("nsw-score");
-// const VICStars = document.getElementById("vic-score");
-// const QLStars = document.getElementById("ql-score");
-// const SAStars = document.getElementById("sa-score");
-// const WAStars = document.getElementById("wa-score");
-// const NTStars = document.getElementById("nt-score");
-// const TAZStars = document.getElementById("taz-score");
-
 document.addEventListener("DOMContentLoaded", () => {
   let currentBadges = JSON.parse(localStorage.getItem("badges"));
 
@@ -26,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   addBadgeStyling(matchesObject);
 });
 
-// HELPER FUNCTION
 function checkStateAnimals(arr) {
   const states = {
     nsw: ["koala", "emu", "funnel-web"],
