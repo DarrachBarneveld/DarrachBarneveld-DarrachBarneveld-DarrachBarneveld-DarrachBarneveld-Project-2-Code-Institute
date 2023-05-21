@@ -1,5 +1,6 @@
 const gameForm = document.getElementById("game-form");
 const submitButton = document.getElementById("submitButton");
+const questionContainer = document.querySelector(".question-container");
 const questionText = document.getElementById("question");
 const answersText = document.getElementById("answers");
 
@@ -7,6 +8,7 @@ const url = window.location.search.split("?");
 
 let category;
 let correctAnswers = 0;
+let mode;
 
 switch (url[1]) {
   case "history":
@@ -40,6 +42,8 @@ async function fetchQuestions() {
     'input[name="difficulty"]:checked'
   ).value;
 
+  mode = difficulty;
+
   try {
     const APIUrl = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
     const result = await fetch(`${APIUrl}`);
@@ -63,7 +67,7 @@ async function startGame(e) {
 async function nextQuestion(questions, index) {
   if (questions.length <= index) {
     await delayTimer(500);
-    console.log("end quiz");
+    endQuiz();
     return;
   }
 
@@ -113,4 +117,81 @@ function delayTimer(delay) {
   });
 }
 
+function endQuiz() {
+  let html;
+  let reward;
+
+  if (correctAnswers >= 1 && mode === "easy") {
+    html = `
+    <h3>You Won!</h3>
+    <div class="badge-container">
+    <img
+      class="badge"
+      src="assets/images/bronze.png"
+      alt="Picture of a bronze medal"
+    />
+  </div>`;
+    reward = { category: url[1], easy: true };
+  }
+
+  if (correctAnswers >= 1 && mode === "medium") {
+    html = `
+    <h3>You Won!</h3>
+    <div class="badge-container">
+    <img
+      class="badge"
+      src="assets/images/silver.png"
+      alt="Picture of a silver medal"
+    />
+  </div>`;
+    reward = { category: url[1], medium: true };
+  }
+
+  if (correctAnswers >= 1 && mode === "hard") {
+    html = `
+    <h3>You Won!</h3>
+    <div class="badge-container">
+    <img
+      class="badge"
+      src="assets/images/gold.png"
+      alt="Picture of a gold medal"
+    />
+  </div>`;
+    reward = { category: url[1], hard: true };
+  }
+
+  questionContainer.innerHTML = html;
+
+  storeBadges(reward);
+}
+
 gameForm.addEventListener("submit", startGame);
+
+function storeBadges(reward) {
+  let currentMedals = JSON.parse(localStorage.getItem("medals"));
+
+  if (!currentMedals) {
+    localStorage.setItem("medals", JSON.stringify([reward]));
+  } else {
+    const newMedalArray = mergeMedals(reward, currentMedals);
+
+    localStorage.setItem("medals", JSON.stringify(newMedalArray));
+  }
+}
+
+function mergeMedals(reward, medalArray) {
+  {
+    const { category, ...props } = reward;
+
+    const matchedCategory = medalArray.find((obj) => obj.category === category);
+
+    if (matchedCategory) {
+      Object.assign(matchedCategory, props);
+    } else {
+      const newObj = { category, ...props };
+      medalArray.push(newObj);
+    }
+  }
+
+  return medalArray;
+}
