@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let currentBadges = JSON.parse(localStorage.getItem("badges"));
+  let currentBadges = JSON.parse(localStorage.getItem("medals"));
 
   if (!currentBadges) return;
   else {
@@ -11,61 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  let currentBadges = JSON.parse(localStorage.getItem("badges"));
-
-  const matchesObject = checkStateAnimals(currentBadges);
-
-  addBadgeStyling(matchesObject);
+  let currentMedals = JSON.parse(localStorage.getItem("medals"));
+  addMedalStyling(currentMedals);
 });
 
-function checkStateAnimals(arr) {
-  const states = {
-    nsw: ["koala", "emu", "funnel-web"],
-    vic: ["possum", "wombat", "bandicoot"],
-    ql: ["cassowary", "inland-taipan", "crocodile"],
-    sa: ["echidna", "platypus", "kangaroo"],
-    wa: ["quokka", "sea-lion", "great-white"],
-    nt: ["python", "wallaby", "cane-toad"],
-    taz: ["huntsman", "taz-devil", "thylacine"],
-  };
+function addMedalStyling(currentMedals) {
+  currentMedals.forEach((object) => {
+    const { category, easy, medium, hard } = object;
 
-  var stateMatches = {};
-
-  for (let state in states) {
-    let animals = states[state];
-    let matches = 0;
-    for (let i = 0; i < animals.length; i++) {
-      let currentAnimal = animals[i];
-      if (arr.includes(currentAnimal)) {
-        matches++;
-      }
+    if (easy) {
+      const element = document.getElementById(`${category}-score`);
+      const child = element.children[0];
+      child.style.color = "var(--bronze)";
     }
-
-    if (matches > 0) {
-      stateMatches[state] = matches;
+    if (medium) {
+      const element = document.getElementById(`${category}-score`);
+      const child = element.children[1];
+      child.style.color = "var(--silver)";
     }
-  }
-
-  return stateMatches;
-}
-
-function addBadgeStyling(matchedObject) {
-  const objectArray = Object.entries(matchedObject);
-
-  objectArray.forEach((array) => {
-    const amount = array[1];
-
-    for (let i = 0; i < amount; i++) {
-      const element = document.getElementById(`${array[0]}-score`);
-      const child = element.children[i];
-
-      if (i === 0) {
-        child.style.color = "var(--bronze)";
-      } else if (i == 1) {
-        child.style.color = "var(--silver)";
-      } else {
-        child.style.color = "goldenrod";
-      }
+    if (hard) {
+      const element = document.getElementById(`${category}-score`);
+      const child = element.children[2];
+      child.style.color = "goldenrod";
     }
   });
 }
