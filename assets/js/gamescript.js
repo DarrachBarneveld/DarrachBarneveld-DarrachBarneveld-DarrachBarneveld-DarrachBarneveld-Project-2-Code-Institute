@@ -9,6 +9,7 @@ const replayBtn = document.getElementById("replay");
 const returnBtn = document.getElementById("return");
 const iconContainer = document.querySelector(".icon-container");
 const fieldset = document.getElementsByTagName("fieldset").item(0);
+const loader = document.getElementById("loader");
 
 const logoImage = document.getElementById("icon");
 const headline = document.getElementById("headline");
@@ -135,11 +136,14 @@ async function startGame(e) {
   const difficulty = document.querySelector(
     'input[name="difficulty"]:checked'
   ).value;
+
   mode = difficulty;
+  loader.classList.remove("hidden");
 
   formArea.remove();
 
   const { results } = await fetchQuestions(difficulty);
+  loader.classList.add("hidden");
   nextQuestion(results, 0);
 }
 

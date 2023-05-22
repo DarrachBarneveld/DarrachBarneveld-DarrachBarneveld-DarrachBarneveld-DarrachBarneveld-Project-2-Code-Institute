@@ -118,7 +118,7 @@ a {
   font-weight: bolder;
   top: 0;
   right: 5px;
-  font-size: 2.4rem;
+  font-size: 3rem;
   background: transparent;
 }
 
@@ -211,8 +211,6 @@ a {
   text-decoration: underline;
 }
 
-/* SCORE BADGE */
-
 /* MAIN */
 .wrapper {
   width: 100%;
@@ -286,43 +284,12 @@ a {
   color: var(--off-black);
   font-size: 1.4rem;
 }
-/* MAP STATES */
-
-#WA {
-  fill: var(--blue);
-}
-
-#NT {
-  fill: var(--red);
-}
-
-#QLD {
-  fill: var(--green);
-}
-
-#SA {
-  fill: var(--yellow);
-}
-
-#NSW {
-  fill: var(--orange);
-}
-
-#VIC {
-  fill: var(--purple);
-}
-
-#TAS {
-  fill: var(--sky);
-}
 
 .state:hover {
   transition: all 150ms;
   filter: brightness(1.5);
   cursor: pointer;
 }
-
-/* STATES */
 
 .medal-container {
   display: flex;
@@ -348,6 +315,15 @@ a {
 }
 
 /* GAME FORM */
+
+#loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
 
 #form-area {
   display: flex;
@@ -569,4 +545,15 @@ a {
   width: 100%;
   aspect-ratio: 1/1;
   border-radius: 10px;
+}
+
+/* ANIMATIONS */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
