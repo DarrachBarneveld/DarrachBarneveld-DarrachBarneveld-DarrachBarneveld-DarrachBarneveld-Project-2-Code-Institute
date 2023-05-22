@@ -194,7 +194,15 @@ async function checkAnswer(e, answer, index, questions) {
 
 function delayTimer(delay) {
   return new Promise((resolve) => {
+    const disableBtns = Array.from(document.getElementsByTagName("button"));
+
+    disableBtns.forEach((btn) => {
+      btn.disabled = true;
+    });
     setTimeout(() => {
+      disableBtns.forEach((btn) => {
+        btn.disabled = false;
+      });
       resolve();
     }, delay);
   });

@@ -238,7 +238,7 @@ a {
   align-items: center;
   width: 100%;
   height: 100%;
-  max-width: 800px;
+  max-width: 600px;
 }
 
 .score-box {
@@ -268,11 +268,11 @@ a {
   align-items: center;
 }
 
-.state-score-list {
+.category-score-list {
   list-style: none;
 }
 
-.state-score {
+.category-score {
   font-size: 1rem;
   justify-content: space-between;
   align-items: center;
@@ -292,7 +292,7 @@ a {
   font-size: 1.4rem;
 }
 
-.state:hover {
+.category:hover {
   transition: all 150ms;
   filter: brightness(1.5);
   cursor: pointer;
@@ -446,7 +446,13 @@ a {
   box-shadow: var(--btn-box-shadow);
 }
 
-.btn:hover {
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.btn:hover,
+.btn:focus {
   cursor: pointer;
   filter: brightness(1.4);
 }
