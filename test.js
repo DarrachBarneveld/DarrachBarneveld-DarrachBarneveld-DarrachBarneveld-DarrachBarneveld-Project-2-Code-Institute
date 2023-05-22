@@ -46,6 +46,11 @@ let correctAnswers = 0;
 let mode;
 
 switch (url[1]) {
+  case "music":
+    category = "12";
+    logoImage.src = "/assets/images/music.png";
+    headline.textContent = "Earn All Musical Medals!";
+    break;
   case "history":
     category = "23";
     logoImage.src = "/assets/images/history.png";

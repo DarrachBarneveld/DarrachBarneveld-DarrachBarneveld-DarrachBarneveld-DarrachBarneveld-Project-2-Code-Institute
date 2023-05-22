@@ -1,5 +1,5 @@
 :root {
-  --theme: #3771b4;
+  --theme: #533b7c;
   --blue: #3771b4;
   --red: #de3539;
   --yellow: #f4b335;
@@ -7,6 +7,7 @@
   --orange: #e36927;
   --purple: #803788;
   --sky: #66b9de;
+  --pink: #ff69b4;
   --bronze: #cd7f32;
   --silver: #c0c0c0;
   --off-black: #111111;
@@ -41,7 +42,7 @@ body {
   padding-inline: 4rem;
   align-items: center;
   width: 100%;
-  background-color: #3771b4;
+  background-color: var(--theme);
   min-height: 4rem;
 }
 
@@ -70,7 +71,7 @@ body {
   padding-inline: 4rem;
   align-items: center;
   width: 100%;
-  background-color: #3771b4;
+  background-color: var(--theme);
   min-height: 4rem;
 }
 
@@ -117,6 +118,8 @@ body {
   padding: 1rem;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #f1dfd1;
+  background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
 }
 
 .map-container {
@@ -138,8 +141,7 @@ body {
   border: 3px solid var(--off-black);
   border-radius: 10px;
   box-shadow: var(--primary-shadow);
-  background-color: #f8f9d2;
-  background-image: linear-gradient(315deg, #f8f9d2 0%, #e8dbfc 74%);
+  background-color: white;
 }
 
 .score-title {
@@ -207,9 +209,6 @@ body {
 
 #TAS {
   fill: var(--sky);
-}
-
-.state {
 }
 
 .state:hover {
@@ -421,6 +420,7 @@ body {
   border: 1px solid black;
   border-radius: 10px;
   gap: 1rem;
+  padding: 0.25rem;
   background-color: whitesmoke;
   padding-bottom: 1rem;
 }
@@ -436,10 +436,11 @@ body {
   padding-bottom: 1rem;
 }
 
-.state-title {
+.category-title {
   width: 100%;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.4em;
+  color: white;
   text-transform: uppercase;
   padding: 1rem 1rem 0 1rem;
 }

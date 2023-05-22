@@ -15,11 +15,11 @@ function completedCategoryCheck(array) {
       element.classList.add("badge-box");
       element.classList.remove("none");
 
-      const html = ` <h3 class="state-title">${category.toUpperCase()}</h3>
+      const html = ` <h3 class="category-title">${category.toUpperCase()}</h3>
       <div class="icon">
         <img src="assets/images/${category}.png" />
       </div>
-      <div class="badge-container">
+      <div class="medal-container">
         <img class="badge" src="/assets/images/bronze.png" />
         <img class="badge" src="/assets/images/silver.png" />
         <img class="badge" src="/assets/images/gold.png" />
