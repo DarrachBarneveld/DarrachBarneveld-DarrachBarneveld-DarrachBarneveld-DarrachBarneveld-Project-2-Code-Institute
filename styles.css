@@ -3,7 +3,7 @@
   --blue: #3771b4;
   --red: #de3539;
   --yellow: #f4b335;
-  --green: #7ab131;
+  --green: #6ec531;
   --orange: #e36927;
   --purple: #803788;
   --sky: #66b9de;
@@ -219,7 +219,6 @@ body {
 }
 
 /* STATES */
-
 .main {
   display: flex;
   flex-direction: column;
@@ -229,7 +228,7 @@ body {
   padding: 1rem;
 }
 
-.badge-container {
+.medal-container {
   display: flex;
   width: 100%;
   max-width: 300px;
@@ -251,31 +250,62 @@ body {
   width: 100px;
 }
 
-/* RIGHT CONTAINER */
+/* GAME FORM */
 
-.title-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+#game-form {
+  padding: 1rem;
 }
 
-.crest-container {
-  max-width: 200px;
+#game-form fieldset {
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: 5px solid var(--blue);
 }
 
-.crest-container img {
-  width: 100%;
-  object-fit: contain;
+#game-form legend {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+#game-form input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555555;
+  border-radius: 50%;
+  background-clip: content-box;
+  padding: 3px;
+}
+
+#easy:checked {
+  background-color: var(--green);
+}
+
+#easy:checked + label {
+  color: var(--green);
+  font-weight: bold;
+}
+
+#medium:checked {
+  background-color: var(--blue);
+}
+
+#medium:checked + label {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+#hard:checked {
+  background-color: var(--red);
+}
+
+#hard:checked + label {
+  color: var(--red);
+  font-weight: bold;
 }
 
 /* QUESTIONS */
-
-.question-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
 
 #answers {
   display: flex;

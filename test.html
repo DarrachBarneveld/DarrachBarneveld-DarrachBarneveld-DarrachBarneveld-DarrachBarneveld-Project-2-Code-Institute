@@ -24,9 +24,10 @@
           alt="Map of Northern Territory"
         />
       </div>
+
       <h1 id="headline"></h1>
 
-      <div class="badge-container">
+      <div class="medal-container">
         <img
           id="bronze"
           class="badge"
@@ -47,48 +48,44 @@
         />
       </div>
 
-      <div class="question-container">
-        <form id="game-form">
-          <fieldset>
-            <legend>Difficulty Level</legend>
-            <input
-              type="radio"
-              id="easy"
-              name="difficulty"
-              value="easy"
-              required
-            />
-            <label for="easy">Easy</label><br />
-            <input
-              type="radio"
-              id="medium"
-              name="difficulty"
-              value="medium"
-              required
-            />
-            <label for="medium">Medium</label><br />
-            <input
-              type="radio"
-              id="hard"
-              name="difficulty"
-              value="hard"
-              required
-            />
-            <label for="hard">Hard</label>
-          </fieldset>
-          <br />
+      <form id="game-form">
+        <fieldset>
+          <legend>Difficulty Level</legend>
           <input
-            class="btn"
-            style="background-color: green"
-            type="submit"
-            value="Start Quiz!"
+            type="radio"
+            id="easy"
+            name="difficulty"
+            value="easy"
+            required
           />
-        </form>
-
-        <h2 id="question"></h2>
-
-        <div id="answers"></div>
-      </div>
+          <label for="easy">Easy</label><br />
+          <input
+            type="radio"
+            id="medium"
+            name="difficulty"
+            value="medium"
+            required
+          />
+          <label for="medium">Medium</label><br />
+          <input
+            type="radio"
+            id="hard"
+            name="difficulty"
+            value="hard"
+            required
+          />
+          <label for="hard">Hard</label>
+        </fieldset>
+        <br />
+        <input
+          class="btn"
+          style="background-color: green"
+          type="submit"
+          value="Start Quiz!"
+        />
+      </form>
+      <h2 id="question"></h2>
+      <div id="answers"></div>
     </main>
   </body>
   <script src="test.js"></script>
