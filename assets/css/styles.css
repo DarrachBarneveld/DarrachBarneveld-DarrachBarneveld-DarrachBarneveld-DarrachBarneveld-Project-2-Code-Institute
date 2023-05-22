@@ -38,13 +38,20 @@ body {
 /* HEADER */
 
 #header {
+  width: 100%;
+  background-color: var(--theme);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  padding: 1rem 2rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background-color: var(--theme);
-  min-height: 4rem;
-  color: white;
 }
 
 .logo:hover,
@@ -572,7 +579,8 @@ a {
 }
 
 @media (max-width: 767px) {
-  #header {
+  .header-container {
+    padding: 1rem 0.25rem;
     flex-direction: column;
     text-align: center;
     padding: 1rem 0.25rem;
