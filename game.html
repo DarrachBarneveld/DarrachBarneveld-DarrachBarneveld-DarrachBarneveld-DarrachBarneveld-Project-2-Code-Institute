@@ -134,9 +134,14 @@
             type="submit"
             value="Start Quiz!"
           />
-          <button class="btn" id="return-home" style="margin-top: 1rem">
-            <i class="fas fa-house"></i>Home
-          </button>
+          <a
+            aria-label="Move to home page"
+            class="btn"
+            style="margin-top: 1rem"
+            href="./"
+          >
+            <i aria-hidden="true" class="fas fa-house"></i>Home
+          </a>
         </form>
       </div>
       <div id="loader" class="hidden"></div>
@@ -148,9 +153,9 @@
         <button class="btn" id="replay">
           <i class="fas fa-arrows-rotate"></i>Replay
         </button>
-        <button class="btn" id="return">
-          <i class="fas fa-house"></i>Home
-        </button>
+        <a aria-label="Move to home page" class="btn" href="./">
+          <i aria-hidden="true" class="fas fa-house"></i>Home
+        </a>
       </div>
     </main>
 
