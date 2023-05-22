@@ -147,6 +147,11 @@ function endQuiz() {
   let html;
   let reward;
 
+  if (correctAnswers === 0) {
+    html = `    <h2>Better luck next time!</h2>
+    `;
+  }
+
   if (correctAnswers >= 1 && mode === "easy") {
     html = `
     <h3>You Won!</h3>
@@ -157,6 +162,7 @@ function endQuiz() {
     />
   `;
     reward = { category: url[1], easy: true };
+    storeBadges(reward);
   }
 
   if (correctAnswers >= 1 && mode === "medium") {
@@ -169,6 +175,7 @@ function endQuiz() {
     />
 `;
     reward = { category: url[1], medium: true };
+    storeBadges(reward);
   }
 
   if (correctAnswers >= 1 && mode === "hard") {
@@ -181,12 +188,11 @@ function endQuiz() {
     />
   `;
     reward = { category: url[1], hard: true };
+    storeBadges(reward);
   }
 
   gameArea.innerHTML = html;
   btnContainer.classList.remove("hidden");
-
-  storeBadges(reward);
 }
 
 function storeBadges(reward) {
