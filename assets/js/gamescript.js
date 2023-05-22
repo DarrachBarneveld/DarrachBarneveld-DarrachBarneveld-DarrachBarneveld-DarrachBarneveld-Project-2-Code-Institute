@@ -2,6 +2,7 @@ const formArea = document.getElementById("form-area");
 const gameArea = document.getElementById("game-area");
 const gameForm = document.getElementById("game-form");
 const submitButton = document.getElementById("submitButton");
+const returnHomeBtn = document.getElementById("return-home");
 const questionText = document.getElementById("question");
 const answersText = document.getElementById("answers");
 const btnContainer = document.querySelector(".btn-container");
@@ -301,3 +302,4 @@ function returnHome() {
 gameForm.addEventListener("submit", startGame);
 replayBtn.addEventListener("click", replayGame);
 returnBtn.addEventListener("click", returnHome);
+returnHomeBtn.addEventListener("click", returnHome);
