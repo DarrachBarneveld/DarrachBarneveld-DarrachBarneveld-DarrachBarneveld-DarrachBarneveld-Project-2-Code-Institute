@@ -40,7 +40,6 @@ body {
 #header {
   display: flex;
   justify-content: space-between;
-  padding-inline: 4rem;
   align-items: center;
   width: 100%;
   background-color: var(--theme);
@@ -150,6 +149,7 @@ a {
   color: white;
   justify-content: center;
   align-items: center;
+  text-align: center;
   width: 100%;
   padding: 1rem;
   gap: 1rem;
@@ -221,7 +221,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   background-color: #f1dfd1;
-
+  text-align: center;
   background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
 }
 
@@ -325,6 +325,11 @@ a {
   animation: spin 2s linear infinite;
 }
 
+#headline {
+  font-size: 2rem;
+  margin-block: 1rem;
+}
+
 #form-area {
   display: flex;
   justify-content: center;
@@ -344,6 +349,7 @@ a {
   padding: 1rem;
   font-size: 1.4rem;
   border: 5px solid;
+  text-align: left;
 }
 
 #game-form legend {
@@ -555,5 +561,35 @@ a {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+/* MEDIA_QUERIES */
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 767px) {
+  #header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0.25rem;
+    gap: 1rem;
+  }
+
+  .btn-container {
+    flex-direction: column;
+  }
+
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  #headline {
+    font-size: 1.4rem;
   }
 }
