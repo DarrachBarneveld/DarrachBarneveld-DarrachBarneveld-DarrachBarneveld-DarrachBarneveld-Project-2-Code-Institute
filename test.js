@@ -4,6 +4,9 @@ const gameForm = document.getElementById("game-form");
 const submitButton = document.getElementById("submitButton");
 const questionText = document.getElementById("question");
 const answersText = document.getElementById("answers");
+const btnContainer = document.querySelector(".btn-container");
+const replayBtn = document.getElementById("replay");
+const returnBtn = document.getElementById("return");
 
 const logoImage = document.getElementById("icon");
 const headline = document.getElementById("headline");
@@ -15,49 +18,49 @@ let correctAnswers = 0;
 let mode;
 
 switch (url[1]) {
-  case "vic":
+  case "history":
     category = "23";
     logoImage.src = "/assets/images/history.png";
     headline.textContent = "Earn All Historical Medals!";
     break;
-  case "nsw":
+  case "geography":
     category = "22";
     logoImage.src = "/assets/images/geography.png";
     headline.textContent = "Earn All Geographical Medals!";
 
     break;
-  case "wa":
+  case "film":
     category = "11";
     logoImage.src = "/assets/images/film.png";
     headline.textContent = "Earn All Film Medals!";
 
     break;
-  case "tas":
+  case "science":
     category = "17";
     logoImage.src = "/assets/images/science.png";
     headline.textContent = "Earn All Science Medals!";
 
     break;
-  case "sa":
+  case "animals":
     category = "27";
     logoImage.src = "/assets/images/animal.png";
     headline.textContent = "Earn All Animal Medals!";
 
     break;
-  case "nt":
+  case "general":
     category = "9";
     logoImage.src = "/assets/images/general.png";
     headline.textContent = "Earn All General Knowledge Medals!";
 
     break;
-  case "ql":
+  case "sports":
     category = "21";
     logoImage.src = "/assets/images/sports.png";
     headline.textContent = "Earn All Sports Medals!";
 
     break;
   default:
-    category = "nsw";
+    category = "geography";
     logoImage.src = "/assets/images/geography.jpg";
     headline.textContent = "Earn All Geographical Medals!";
     break;
@@ -181,6 +184,7 @@ function endQuiz() {
   }
 
   gameArea.innerHTML = html;
+  btnContainer.classList.remove("hidden");
 
   storeBadges(reward);
 }
@@ -214,4 +218,14 @@ function mergeMedals(reward, medalArray) {
   return medalArray;
 }
 
+function replayGame() {
+  location.reload();
+}
+
+function returnHome() {
+  window.location.href = "index.html";
+}
+
 gameForm.addEventListener("submit", startGame);
+replayBtn.addEventListener("click", replayGame);
+returnBtn.addEventListener("click", returnHome);

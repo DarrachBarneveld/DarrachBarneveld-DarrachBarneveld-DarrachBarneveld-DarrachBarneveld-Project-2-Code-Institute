@@ -360,6 +360,15 @@ body {
   filter: brightness(1.4);
 }
 
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
 /* BADGES */
 
 .badge-grid {
