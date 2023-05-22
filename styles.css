@@ -44,6 +44,7 @@ body {
   width: 100%;
   background-color: var(--theme);
   min-height: 4rem;
+  color: white;
 }
 
 .nav-list {
@@ -63,14 +64,14 @@ body {
   text-decoration: underline;
 }
 
-/* MODAL */
-
-#modal-btn {
+button {
   background: inherit;
   box-shadow: none;
   border: none;
   font-size: inherit;
 }
+
+/* MODAL */
 
 #modal-btn {
   cursor: pointer;
@@ -91,26 +92,43 @@ body {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+  background-color: white;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: fit-content;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 5px solid var(--off-black);
+  position: relative;
 }
 
-/* The Close Button */
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  position: absolute;
+  color: var(--off-black);
+  font-weight: bolder;
+  top: 0;
+  right: 5px;
+  font-size: 2.4rem;
+  background: transparent;
 }
 
 .close:hover,
 .close:focus {
-  color: black;
-  text-decoration: none;
   cursor: pointer;
+  transform: scale(1.05);
+  color: var(--red);
+}
+
+.modal-headline {
+  text-decoration: underline;
+}
+
+.how-to-play {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-block: 1rem;
+  font-size: 1.2rem;
 }
 
 /* FOOTER */
@@ -330,6 +348,10 @@ body {
   padding: 3px;
 }
 
+#game-form input[type="radio"]:hover {
+  cursor: pointer;
+}
+
 #easy:checked {
   background-color: var(--green);
 }
@@ -466,7 +488,7 @@ body {
 .badge-box:nth-child(8) {
   border: 5px solid var(--pink);
   background-color: var(--pink);
-  background-image: linear-gradient(315deg, var(--pink) 0%, #e58c8a 74%);
+  background-image: linear-gradient(315deg, #e58c8a 0%, #fcaeac 74%);
 }
 
 .badge-box {
