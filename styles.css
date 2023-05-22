@@ -233,6 +233,7 @@ body {
   width: 100%;
   max-width: 300px;
   justify-content: center;
+  align-items: center;
   gap: 3%;
 }
 
@@ -252,8 +253,18 @@ body {
 
 /* GAME FORM */
 
+#form-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #game-form {
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #game-form fieldset {
@@ -305,12 +316,31 @@ body {
   font-weight: bold;
 }
 
-/* QUESTIONS */
+/* GAME AREA */
+
+#game-area {
+  padding-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#question {
+  font-size: 1.2rem;
+}
 
 #answers {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
+  max-width: 500px;
+}
+
+#answers .btn {
+  font-size: 1rem;
 }
 
 .btn {

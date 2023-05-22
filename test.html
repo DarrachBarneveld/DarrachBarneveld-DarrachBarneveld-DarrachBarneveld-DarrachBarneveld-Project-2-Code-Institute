@@ -25,67 +25,70 @@
         />
       </div>
 
-      <h1 id="headline"></h1>
+      <div id="form-area">
+        <h1 id="headline"></h1>
+        <div class="medal-container">
+          <img
+            id="bronze"
+            class="badge"
+            src="assets/images/unknown-medal.png"
+            alt="picture of a unknown medal"
+          />
+          <img
+            id="silver"
+            class="badge"
+            src="assets/images/unknown-medal.png"
+            alt="picture of a unknown medal"
+          />
+          <img
+            id="gold"
+            class="badge"
+            src="assets/images/unknown-medal.png"
+            alt="picture of a unknown medal"
+          />
+        </div>
 
-      <div class="medal-container">
-        <img
-          id="bronze"
-          class="badge"
-          src="assets/images/unknown-medal.png"
-          alt="picture of a unknown medal"
-        />
-        <img
-          id="silver"
-          class="badge"
-          src="assets/images/unknown-medal.png"
-          alt="picture of a unknown medal"
-        />
-        <img
-          id="gold"
-          class="badge"
-          src="assets/images/unknown-medal.png"
-          alt="picture of a unknown medal"
-        />
+        <form id="game-form">
+          <fieldset>
+            <legend>Difficulty Level</legend>
+            <input
+              type="radio"
+              id="easy"
+              name="difficulty"
+              value="easy"
+              required
+            />
+            <label for="easy">Easy</label><br />
+            <input
+              type="radio"
+              id="medium"
+              name="difficulty"
+              value="medium"
+              required
+            />
+            <label for="medium">Medium</label><br />
+            <input
+              type="radio"
+              id="hard"
+              name="difficulty"
+              value="hard"
+              required
+            />
+            <label for="hard">Hard</label>
+          </fieldset>
+          <br />
+          <input
+            class="btn"
+            style="background-color: green"
+            type="submit"
+            value="Start Quiz!"
+          />
+        </form>
       </div>
-
-      <form id="game-form">
-        <fieldset>
-          <legend>Difficulty Level</legend>
-          <input
-            type="radio"
-            id="easy"
-            name="difficulty"
-            value="easy"
-            required
-          />
-          <label for="easy">Easy</label><br />
-          <input
-            type="radio"
-            id="medium"
-            name="difficulty"
-            value="medium"
-            required
-          />
-          <label for="medium">Medium</label><br />
-          <input
-            type="radio"
-            id="hard"
-            name="difficulty"
-            value="hard"
-            required
-          />
-          <label for="hard">Hard</label>
-        </fieldset>
-        <br />
-        <input
-          class="btn"
-          style="background-color: green"
-          type="submit"
-          value="Start Quiz!"
-        />
-      </form>
-      <h2 id="question"></h2>
-      <div id="answers"></div>
+      <div id="game-area">
+        <h2 id="question"></h2>
+        <div id="answers"></div>
+      </div>
     </main>
   </body>
   <script src="test.js"></script>

@@ -1,6 +1,7 @@
+const formArea = document.getElementById("form-area");
+const gameArea = document.getElementById("game-area");
 const gameForm = document.getElementById("game-form");
 const submitButton = document.getElementById("submitButton");
-const questionContainer = document.querySelector(".question-container");
 const questionText = document.getElementById("question");
 const answersText = document.getElementById("answers");
 
@@ -21,56 +22,48 @@ switch (url[1]) {
     break;
   case "nsw":
     category = "22";
-    logoImage.src = "/assets/images/nsw.jpg";
-    headline.textContent = "Conquer New South Wales Geographical Questions!";
+    logoImage.src = "/assets/images/geography.png";
+    headline.textContent = "Earn All Geographical Medals!";
 
     break;
   case "wa":
     category = "11";
-    logoImage.src = "/assets/images/wa.jpg";
-    headline.textContent = "Conquer Western Australias Film Questions!";
+    logoImage.src = "/assets/images/film.png";
+    headline.textContent = "Earn All Film Medals!";
 
     break;
   case "tas":
     category = "17";
-    logoImage.src = "/assets/images/taz.jpg";
-    categoryHeadline.textContent = "Tasmania";
-    headline.textContent = "Conquer Tasmanias Science Questions!";
+    logoImage.src = "/assets/images/science.png";
+    headline.textContent = "Earn All Science Medals!";
 
     break;
   case "sa":
     category = "27";
-    logoImage.src = "/assets/images/sa.jpg";
-    headline.textContent = "Conquer South Australias Animal Questions!";
+    logoImage.src = "/assets/images/animal.png";
+    headline.textContent = "Earn All Animal Medals!";
 
     break;
   case "nt":
     category = "9";
-    logoImage.src = "/assets/images/nt.jpg";
-    headline.textContent = "Northern Territories General Knowledge Questions!";
+    logoImage.src = "/assets/images/general.png";
+    headline.textContent = "Earn All General Knowledge Medals!";
 
     break;
   case "ql":
     category = "21";
-    logoImage.src = "/assets/images/ql.jpg";
-    categoryHeadline.textContent = "Queensland";
-    headline.textContent = "Conquer Queenslands Sports Questions!";
+    logoImage.src = "/assets/images/sports.png";
+    headline.textContent = "Earn All Sports Medals!";
 
     break;
   default:
     category = "nsw";
-    logoImage.src = "/assets/images/nsw.jpg";
-    headline.textContent = "Conquer New South Wales Geographical Questions!";
+    logoImage.src = "/assets/images/geography.jpg";
+    headline.textContent = "Earn All Geographical Medals!";
     break;
 }
 
-async function fetchQuestions() {
-  const difficulty = document.querySelector(
-    'input[name="difficulty"]:checked'
-  ).value;
-
-  mode = difficulty;
-
+async function fetchQuestions(difficulty) {
   try {
     const APIUrl = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
     const result = await fetch(`${APIUrl}`);
@@ -83,11 +76,15 @@ async function fetchQuestions() {
 
 async function startGame(e) {
   e.preventDefault();
-  const { results } = await fetchQuestions();
+  const difficulty = document.querySelector(
+    'input[name="difficulty"]:checked'
+  ).value;
+  mode = difficulty;
 
+  formArea.remove();
+
+  const { results } = await fetchQuestions(difficulty);
   nextQuestion(results, 0);
-
-  gameForm.remove();
 }
 
 async function nextQuestion(questions, index) {
@@ -150,48 +147,43 @@ function endQuiz() {
   if (correctAnswers >= 1 && mode === "easy") {
     html = `
     <h3>You Won!</h3>
-    <div class="badge-container">
     <img
       class="badge"
       src="assets/images/bronze.png"
       alt="Picture of a bronze medal"
     />
-  </div>`;
+  `;
     reward = { category: url[1], easy: true };
   }
 
   if (correctAnswers >= 1 && mode === "medium") {
     html = `
     <h3>You Won!</h3>
-    <div class="badge-container">
     <img
       class="badge"
       src="assets/images/silver.png"
       alt="Picture of a silver medal"
     />
-  </div>`;
+`;
     reward = { category: url[1], medium: true };
   }
 
   if (correctAnswers >= 1 && mode === "hard") {
     html = `
     <h3>You Won!</h3>
-    <div class="badge-container">
     <img
       class="badge"
       src="assets/images/gold.png"
       alt="Picture of a gold medal"
     />
-  </div>`;
+  `;
     reward = { category: url[1], hard: true };
   }
 
-  questionContainer.innerHTML = html;
+  gameArea.innerHTML = html;
 
   storeBadges(reward);
 }
-
-gameForm.addEventListener("submit", startGame);
 
 function storeBadges(reward) {
   let currentMedals = JSON.parse(localStorage.getItem("medals"));
@@ -221,3 +213,5 @@ function mergeMedals(reward, medalArray) {
 
   return medalArray;
 }
+
+gameForm.addEventListener("submit", startGame);
