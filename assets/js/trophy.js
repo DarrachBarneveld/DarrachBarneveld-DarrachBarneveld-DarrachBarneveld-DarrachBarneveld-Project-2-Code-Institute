@@ -19,9 +19,9 @@ function completedCategoryCheck(array) {
         <img src="assets/images/${category}.png" />
       </div>
       <div class="medal-container">
-        <img class="badge" src="/assets/images/bronze.png" />
-        <img class="badge" src="/assets/images/silver.png" />
-        <img class="badge" src="/assets/images/gold.png" />
+        <img class="badge" src="assets/images/bronze.png" />
+        <img class="badge" src="assets/images/silver.png" />
+        <img class="badge" src="assets/images/gold.png" />
       </div>`;
 
       element.innerHTML = html;

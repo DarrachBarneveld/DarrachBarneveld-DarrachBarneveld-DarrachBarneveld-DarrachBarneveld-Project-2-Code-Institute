@@ -52,28 +52,28 @@ let mode;
 switch (url[1]) {
   case "music":
     category = "12";
-    logoImage.src = "/assets/images/music.png";
+    logoImage.src = "assets/images/music.png";
     headline.textContent = "Earn All Musical Medals!";
     iconContainer.style.borderColor = "var(--pink)";
     fieldset.style.borderColor = "var(--pink)";
     break;
   case "history":
     category = "23";
-    logoImage.src = "/assets/images/history.png";
+    logoImage.src = "assets/images/history.png";
     headline.textContent = "Earn All Historical Medals!";
     iconContainer.style.borderColor = "var(--purple)";
     fieldset.style.borderColor = "var(--purple)";
     break;
   case "geography":
     category = "22";
-    logoImage.src = "/assets/images/geography.png";
+    logoImage.src = "assets/images/geography.png";
     headline.textContent = "Earn All Geographical Medals!";
     iconContainer.style.borderColor = "var(--orange)";
     fieldset.style.borderColor = "var(--orange)";
     break;
   case "film":
     category = "11";
-    logoImage.src = "/assets/images/film.png";
+    logoImage.src = "assets/images/film.png";
     headline.textContent = "Earn All Film Medals!";
     iconContainer.style.borderColor = "var(--blue)";
     fieldset.style.borderColor = "var(--blue)";
@@ -81,7 +81,7 @@ switch (url[1]) {
     break;
   case "science":
     category = "17";
-    logoImage.src = "/assets/images/science.png";
+    logoImage.src = "assets/images/science.png";
     headline.textContent = "Earn All Science Medals!";
     iconContainer.style.borderColor = "var(--sky)";
     fieldset.style.borderColor = "var(--sky)";
@@ -89,7 +89,7 @@ switch (url[1]) {
     break;
   case "animals":
     category = "27";
-    logoImage.src = "/assets/images/animals.png";
+    logoImage.src = "assets/images/animals.png";
     headline.textContent = "Earn All Animal Medals!";
     iconContainer.style.borderColor = "var(--yellow)";
     fieldset.style.borderColor = "var(--yellow)";
@@ -97,7 +97,7 @@ switch (url[1]) {
     break;
   case "general":
     category = "9";
-    logoImage.src = "/assets/images/general.png";
+    logoImage.src = "assets/images/general.png";
     headline.textContent = "Earn All General Knowledge Medals!";
     iconContainer.style.borderColor = "var(--red)";
     fieldset.style.borderColor = "var(--red)";
@@ -105,7 +105,7 @@ switch (url[1]) {
     break;
   case "sports":
     category = "21";
-    logoImage.src = "/assets/images/sports.png";
+    logoImage.src = "assets/images/sports.png";
     headline.textContent = "Earn All Sports Medals!";
     iconContainer.style.borderColor = "var(--green)";
     fieldset.style.borderColor = "var(--green)";
@@ -113,7 +113,7 @@ switch (url[1]) {
     break;
   default:
     category = "geography";
-    logoImage.src = "/assets/images/geography.jpg";
+    logoImage.src = "assets/images/geography.jpg";
     headline.textContent = "Earn All Geographical Medals!";
     iconContainer.style.borderColor = "var(--orange)";
     fieldset.style.borderColor = "var(--orange)";
