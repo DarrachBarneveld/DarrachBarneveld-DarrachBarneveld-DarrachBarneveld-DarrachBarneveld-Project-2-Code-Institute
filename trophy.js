@@ -14,7 +14,6 @@ function completedCategoryCheck(array) {
       const element = document.getElementById(category);
       element.classList.add("badge-box");
       element.classList.remove("none");
-
       const html = ` <h3 class="category-title">${category.toUpperCase()}</h3>
       <div class="icon">
         <img src="assets/images/${category}.png" />

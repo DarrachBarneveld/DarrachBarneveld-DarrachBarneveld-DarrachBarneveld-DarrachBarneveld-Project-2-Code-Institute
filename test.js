@@ -7,6 +7,8 @@ const answersText = document.getElementById("answers");
 const btnContainer = document.querySelector(".btn-container");
 const replayBtn = document.getElementById("replay");
 const returnBtn = document.getElementById("return");
+const iconContainer = document.querySelector(".icon-container");
+const fieldset = document.getElementsByTagName("fieldset").item(0);
 
 const logoImage = document.getElementById("icon");
 const headline = document.getElementById("headline");
@@ -20,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   else {
     currentMedals.forEach((object) => {
       const { category, easy, medium, hard } = object;
+
       if (category === url[1]) {
         if (easy) {
           const element = document.getElementById("bronze");
@@ -32,9 +35,9 @@ document.addEventListener("DOMContentLoaded", () => {
           element.alt = "Picture of a silver medal";
         }
         if (hard) {
-          const element = document.getElementById("hard");
-          element.src = "assets/images/hard.png";
-          element.alt = "Picture of a hard medal";
+          const element = document.getElementById("gold");
+          element.src = "assets/images/gold.png";
+          element.alt = "Picture of a gold medal";
         }
       } else return;
     });
@@ -50,52 +53,69 @@ switch (url[1]) {
     category = "12";
     logoImage.src = "/assets/images/music.png";
     headline.textContent = "Earn All Musical Medals!";
+    iconContainer.style.borderColor = "var(--pink)";
+    fieldset.style.borderColor = "var(--pink)";
     break;
   case "history":
     category = "23";
     logoImage.src = "/assets/images/history.png";
     headline.textContent = "Earn All Historical Medals!";
+    iconContainer.style.borderColor = "var(--purple)";
+    fieldset.style.borderColor = "var(--purple)";
     break;
   case "geography":
     category = "22";
     logoImage.src = "/assets/images/geography.png";
     headline.textContent = "Earn All Geographical Medals!";
-
+    iconContainer.style.borderColor = "var(--orange)";
+    fieldset.style.borderColor = "var(--orange)";
     break;
   case "film":
     category = "11";
     logoImage.src = "/assets/images/film.png";
     headline.textContent = "Earn All Film Medals!";
+    iconContainer.style.borderColor = "var(--blue)";
+    fieldset.style.borderColor = "var(--blue)";
 
     break;
   case "science":
     category = "17";
     logoImage.src = "/assets/images/science.png";
     headline.textContent = "Earn All Science Medals!";
+    iconContainer.style.borderColor = "var(--sky)";
+    fieldset.style.borderColor = "var(--sky)";
 
     break;
   case "animals":
     category = "27";
-    logoImage.src = "/assets/images/animal.png";
+    logoImage.src = "/assets/images/animals.png";
     headline.textContent = "Earn All Animal Medals!";
+    iconContainer.style.borderColor = "var(--yellow)";
+    fieldset.style.borderColor = "var(--yellow)";
 
     break;
   case "general":
     category = "9";
     logoImage.src = "/assets/images/general.png";
     headline.textContent = "Earn All General Knowledge Medals!";
+    iconContainer.style.borderColor = "var(--red)";
+    fieldset.style.borderColor = "var(--red)";
 
     break;
   case "sports":
     category = "21";
     logoImage.src = "/assets/images/sports.png";
     headline.textContent = "Earn All Sports Medals!";
+    iconContainer.style.borderColor = "var(--green)";
+    fieldset.style.borderColor = "var(--green)";
 
     break;
   default:
     category = "geography";
     logoImage.src = "/assets/images/geography.jpg";
     headline.textContent = "Earn All Geographical Medals!";
+    iconContainer.style.borderColor = "var(--orange)";
+    fieldset.style.borderColor = "var(--orange)";
     break;
 }
 
