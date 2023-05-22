@@ -4,6 +4,10 @@ const questionContainer = document.querySelector(".question-container");
 const questionText = document.getElementById("question");
 const answersText = document.getElementById("answers");
 
+const mapImage = document.getElementById("map");
+const categoryHeadline = document.getElementById("category-headline");
+const subHeadline = document.getElementById("sub-headline");
+
 const url = window.location.search.split("?");
 
 let category;
@@ -11,29 +15,55 @@ let correctAnswers = 0;
 let mode;
 
 switch (url[1]) {
-  case "history":
+  case "vic":
     category = "23";
+    mapImage.src = "/assets/images/vic.jpg";
+    categoryHeadline.textContent = "Victoria";
+    subHeadline.textContent = "Conquer Victorias Historical Questions!";
     break;
-  case "geography":
+  case "nsw":
     category = "22";
+    mapImage.src = "/assets/images/nsw.jpg";
+    subHeadline.textContent = "Conquer New South Wales Geographical Questions!";
+
     break;
-  case "film":
+  case "wa":
     category = "11";
+    mapImage.src = "/assets/images/wa.jpg";
+    categoryHeadline.textContent = "Western Australia";
+    subHeadline.textContent = "Conquer Western Australias Film Questions!";
+
     break;
-  case "science":
+  case "tas":
     category = "17";
+    mapImage.src = "/assets/images/taz.jpg";
+    subHeadline.textContent = "Conquer Tasmanias Science Questions!";
+
     break;
-  case "animals":
+  case "sa":
     category = "27";
+    mapImage.src = "/assets/images/sa.jpg";
+    subHeadline.textContent = "Conquer South Australias Animal Questions!";
+
     break;
-  case "general":
+  case "nt":
     category = "9";
+    mapImage.src = "/assets/images/nt.jpg";
+    subHeadline.textContent =
+      "Northern Territories General Knowledge Questions!";
+
     break;
-  case "sports":
+  case "ql":
     category = "21";
+    mapImage.src = "/assets/images/ql.jpg";
+    subHeadline.textContent = "Conquer Queenslands Sports Questions!";
+
     break;
   default:
-    category = "general";
+    category = "nsw";
+    mapImage.src = "/assets/images/nsw.jpg";
+    categoryHeadline.textContent = "New South Wales";
+
     break;
 }
 
