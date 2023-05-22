@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  let currentBadges = JSON.parse(localStorage.getItem("medals"));
+  let currentMedals = JSON.parse(localStorage.getItem("medals"));
 
-  if (!currentBadges) return;
+  if (!currentMedals) return;
   else {
     const badgeElement = document.getElementById("total-badges");
-    const totalbadges = currentBadges.length;
+    const totalbadges = currentMedals.length;
 
     badgeElement.textContent = `${totalbadges}/21`;
   }
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   let currentMedals = JSON.parse(localStorage.getItem("medals"));
+  if (!currentMedals) return;
   addMedalStyling(currentMedals);
 });
 
