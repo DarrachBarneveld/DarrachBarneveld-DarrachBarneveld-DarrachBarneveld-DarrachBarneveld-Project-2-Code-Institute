@@ -13,6 +13,36 @@ const headline = document.getElementById("headline");
 
 const url = window.location.search.split("?");
 
+document.addEventListener("DOMContentLoaded", () => {
+  let currentMedals = JSON.parse(localStorage.getItem("medals"));
+
+  console.log(currentMedals);
+
+  if (!currentMedals) return;
+  else {
+    currentMedals.forEach((object) => {
+      const { category, easy, medium, hard } = object;
+      if (category === url[1]) {
+        if (easy) {
+          const element = document.getElementById("bronze");
+          element.src = "assets/images/bronze.png";
+          element.alt = "Picture of a bronze medal";
+        }
+        if (medium) {
+          const element = document.getElementById("silver");
+          element.src = "assets/images/silver.png";
+          element.alt = "Picture of a silver medal";
+        }
+        if (hard) {
+          const element = document.getElementById("hard");
+          element.src = "assets/images/hard.png";
+          element.alt = "Picture of a hard medal";
+        }
+      } else return;
+    });
+  }
+});
+
 let category;
 let correctAnswers = 0;
 let mode;
