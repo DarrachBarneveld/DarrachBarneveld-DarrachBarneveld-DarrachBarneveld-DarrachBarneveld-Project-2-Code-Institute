@@ -16,8 +16,6 @@ const url = window.location.search.split("?");
 document.addEventListener("DOMContentLoaded", () => {
   let currentMedals = JSON.parse(localStorage.getItem("medals"));
 
-  console.log(currentMedals);
-
   if (!currentMedals) return;
   else {
     currentMedals.forEach((object) => {
