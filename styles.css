@@ -169,6 +169,11 @@ body {
   padding: 0.5rem;
   border-top: 1px solid rgba(0, 0, 0, 0.5);
 }
+.score-badges-container {
+  min-width: 80px;
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .score-badges-container i {
   color: var(--off-black);
@@ -216,27 +221,18 @@ body {
 /* STATES */
 
 .main {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  height: 100%;
-  padding: 1rem;
-}
-
-.left-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
   height: 100%;
-}
-
-.image-container {
-  align-self: flex-start;
+  padding: 1rem;
 }
 
 .badge-container {
   display: flex;
   width: 100%;
+  max-width: 300px;
   justify-content: center;
   gap: 3%;
 }
@@ -245,22 +241,17 @@ body {
   width: 30%;
 }
 
-#map {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 5px;
-  border: 5px solid black;
+.icon-container {
+  border-radius: 50%;
+  border: 5px solid var(--blue);
+  padding: 1rem;
+}
+
+#icon {
+  width: 100px;
 }
 
 /* RIGHT CONTAINER */
-
-.right-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  height: 100%;
-  width: 100%;
-}
 
 .title-container {
   display: flex;

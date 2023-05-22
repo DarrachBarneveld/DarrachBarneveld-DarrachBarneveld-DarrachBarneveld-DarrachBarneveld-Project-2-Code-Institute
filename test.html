@@ -17,94 +17,77 @@
     </header>
 
     <main class="main">
-      <div class="left-container">
-        <div class="image-container">
-          <img
-            id="map"
-            src="/assets/images/nt.jpg"
-            alt="Map of Northern Territory"
-          />
-        </div>
+      <div class="icon-container">
+        <img
+          id="icon"
+          src="/assets/images/nt.jpg"
+          alt="Map of Northern Territory"
+        />
+      </div>
+      <h1 id="headline"></h1>
 
-        <div class="badge-container">
-          <img
-            id="badge1"
-            data-set="python"
-            class="badge"
-            src="assets/images/bronze.png"
-            alt="picture of a unknown medal"
-          />
-          <img
-            id="badge2"
-            data-set="wallaby"
-            class="badge"
-            src="assets/images/silver.png"
-            alt="picture of a unknown medal"
-          />
-          <img
-            id="badge3"
-            data-set="cane-toad"
-            class="badge"
-            src="assets/images/gold.png"
-            alt="picture of a unknown medal"
-          />
-        </div>
+      <div class="badge-container">
+        <img
+          id="bronze"
+          class="badge"
+          src="assets/images/unknown-medal.png"
+          alt="picture of a unknown medal"
+        />
+        <img
+          id="silver"
+          class="badge"
+          src="assets/images/unknown-medal.png"
+          alt="picture of a unknown medal"
+        />
+        <img
+          id="gold"
+          class="badge"
+          src="assets/images/unknown-medal.png"
+          alt="picture of a unknown medal"
+        />
       </div>
 
-      <div class="right-container">
-        <div class="title-container">
-          <div class="crest-container">
-            <img
-              src="assets/images/nt-crest.png"
-              alt="northern territory crest"
-            />
-          </div>
-          <h1 id="category-headline"></h1>
-        </div>
-
-        <div class="question-container">
-          <h2 id="sub-headline"></h2>
-          <form id="game-form">
-            <fieldset>
-              <legend>Difficulty Level</legend>
-              <input
-                type="radio"
-                id="easy"
-                name="difficulty"
-                value="easy"
-                required
-              />
-              <label for="easy">Easy</label><br />
-              <input
-                type="radio"
-                id="medium"
-                name="difficulty"
-                value="medium"
-                required
-              />
-              <label for="medium">Medium</label><br />
-              <input
-                type="radio"
-                id="hard"
-                name="difficulty"
-                value="hard"
-                required
-              />
-              <label for="hard">Hard</label>
-            </fieldset>
-            <br />
+      <div class="question-container">
+        <form id="game-form">
+          <fieldset>
+            <legend>Difficulty Level</legend>
             <input
-              class="btn"
-              style="background-color: green"
-              type="submit"
-              value="Start Quiz!"
+              type="radio"
+              id="easy"
+              name="difficulty"
+              value="easy"
+              required
             />
-          </form>
+            <label for="easy">Easy</label><br />
+            <input
+              type="radio"
+              id="medium"
+              name="difficulty"
+              value="medium"
+              required
+            />
+            <label for="medium">Medium</label><br />
+            <input
+              type="radio"
+              id="hard"
+              name="difficulty"
+              value="hard"
+              required
+            />
+            <label for="hard">Hard</label>
+          </fieldset>
+          <br />
+          <input
+            class="btn"
+            style="background-color: green"
+            type="submit"
+            value="Start Quiz!"
+          />
+        </form>
 
-          <h2 id="question"></h2>
+        <h2 id="question"></h2>
 
-          <div id="answers"></div>
-        </div>
+        <div id="answers"></div>
       </div>
     </main>
   </body>

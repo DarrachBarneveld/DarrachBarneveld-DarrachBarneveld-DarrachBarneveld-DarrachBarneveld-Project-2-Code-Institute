@@ -4,9 +4,8 @@ const questionContainer = document.querySelector(".question-container");
 const questionText = document.getElementById("question");
 const answersText = document.getElementById("answers");
 
-const mapImage = document.getElementById("map");
-const categoryHeadline = document.getElementById("category-headline");
-const subHeadline = document.getElementById("sub-headline");
+const logoImage = document.getElementById("icon");
+const headline = document.getElementById("headline");
 
 const url = window.location.search.split("?");
 
@@ -17,53 +16,51 @@ let mode;
 switch (url[1]) {
   case "vic":
     category = "23";
-    mapImage.src = "/assets/images/vic.jpg";
-    categoryHeadline.textContent = "Victoria";
-    subHeadline.textContent = "Conquer Victorias Historical Questions!";
+    logoImage.src = "/assets/images/history.png";
+    headline.textContent = "Earn All Historical Medals!";
     break;
   case "nsw":
     category = "22";
-    mapImage.src = "/assets/images/nsw.jpg";
-    subHeadline.textContent = "Conquer New South Wales Geographical Questions!";
+    logoImage.src = "/assets/images/nsw.jpg";
+    headline.textContent = "Conquer New South Wales Geographical Questions!";
 
     break;
   case "wa":
     category = "11";
-    mapImage.src = "/assets/images/wa.jpg";
-    categoryHeadline.textContent = "Western Australia";
-    subHeadline.textContent = "Conquer Western Australias Film Questions!";
+    logoImage.src = "/assets/images/wa.jpg";
+    headline.textContent = "Conquer Western Australias Film Questions!";
 
     break;
   case "tas":
     category = "17";
-    mapImage.src = "/assets/images/taz.jpg";
-    subHeadline.textContent = "Conquer Tasmanias Science Questions!";
+    logoImage.src = "/assets/images/taz.jpg";
+    categoryHeadline.textContent = "Tasmania";
+    headline.textContent = "Conquer Tasmanias Science Questions!";
 
     break;
   case "sa":
     category = "27";
-    mapImage.src = "/assets/images/sa.jpg";
-    subHeadline.textContent = "Conquer South Australias Animal Questions!";
+    logoImage.src = "/assets/images/sa.jpg";
+    headline.textContent = "Conquer South Australias Animal Questions!";
 
     break;
   case "nt":
     category = "9";
-    mapImage.src = "/assets/images/nt.jpg";
-    subHeadline.textContent =
-      "Northern Territories General Knowledge Questions!";
+    logoImage.src = "/assets/images/nt.jpg";
+    headline.textContent = "Northern Territories General Knowledge Questions!";
 
     break;
   case "ql":
     category = "21";
-    mapImage.src = "/assets/images/ql.jpg";
-    subHeadline.textContent = "Conquer Queenslands Sports Questions!";
+    logoImage.src = "/assets/images/ql.jpg";
+    categoryHeadline.textContent = "Queensland";
+    headline.textContent = "Conquer Queenslands Sports Questions!";
 
     break;
   default:
     category = "nsw";
-    mapImage.src = "/assets/images/nsw.jpg";
-    categoryHeadline.textContent = "New South Wales";
-
+    logoImage.src = "/assets/images/nsw.jpg";
+    headline.textContent = "Conquer New South Wales Geographical Questions!";
     break;
 }
 
@@ -77,7 +74,6 @@ async function fetchQuestions() {
   try {
     const APIUrl = `https://opentdb.com/api.php?amount=10&category=${category}&difficulty=${difficulty}&type=multiple`;
     const result = await fetch(`${APIUrl}`);
-
     const data = await result.json();
     return data;
   } catch (error) {
