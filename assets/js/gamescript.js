@@ -144,6 +144,7 @@ async function startGame(e) {
 
   const { results } = await fetchQuestions(difficulty);
   loader.classList.add("hidden");
+  questionText.classList.remove("hidden");
   nextQuestion(results, 0);
 }
 
