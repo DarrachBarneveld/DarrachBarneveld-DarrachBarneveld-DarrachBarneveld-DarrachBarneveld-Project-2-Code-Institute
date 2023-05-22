@@ -200,12 +200,12 @@ function endQuiz() {
   let html;
   let reward;
 
-  if (correctAnswers === 0) {
+  if (correctAnswers < 8) {
     html = `    <h2>Better luck next time!</h2>
     `;
   }
 
-  if (correctAnswers >= 1 && mode === "easy") {
+  if (correctAnswers >= 8 && mode === "easy") {
     html = `
     <h3>You Won!</h3>
     <img
@@ -218,7 +218,7 @@ function endQuiz() {
     storeBadges(reward);
   }
 
-  if (correctAnswers >= 1 && mode === "medium") {
+  if (correctAnswers >= 8 && mode === "medium") {
     html = `
     <h3>You Won!</h3>
     <img
@@ -231,7 +231,7 @@ function endQuiz() {
     storeBadges(reward);
   }
 
-  if (correctAnswers >= 1 && mode === "hard") {
+  if (correctAnswers >= 8 && mode === "hard") {
     html = `
     <h3>You Won!</h3>
     <img

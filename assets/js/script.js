@@ -1,7 +1,3 @@
-const modalBtn = document.getElementById("modal-btn");
-const modal = document.getElementById("modal");
-const closeBtn = document.querySelector(".close");
-
 document.addEventListener("DOMContentLoaded", () => {
   let currentBadges = JSON.parse(localStorage.getItem("medals"));
 
@@ -40,14 +36,3 @@ function addMedalStyling(currentMedals) {
     }
   });
 }
-
-function showModal() {
-  modal.style.display = "block";
-}
-
-function closeModal() {
-  modal.style.display = "none";
-}
-
-closeBtn.addEventListener("click", closeModal);
-modalBtn.addEventListener("click", showModal);
