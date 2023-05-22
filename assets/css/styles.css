@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 :root {
   --theme: #533b7c;
   --blue: #3771b4;
@@ -22,7 +23,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
 body {
@@ -47,6 +48,11 @@ body {
   color: white;
 }
 
+.logo:hover,
+.logo:focus {
+  text-decoration: underline;
+}
+
 .nav-list {
   list-style: none;
   display: flex;
@@ -69,6 +75,11 @@ button {
   box-shadow: none;
   border: none;
   font-size: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* MODAL */
@@ -135,24 +146,27 @@ button {
 
 #footer {
   display: flex;
-  justify-content: space-between;
-  padding-inline: 4rem;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 1rem;
+  gap: 1rem;
   background-color: var(--theme);
-  min-height: 4rem;
 }
-
 .socials {
   display: flex;
   gap: 1rem;
-  background-color: var(--off-black);
   padding: 1rem;
   border-radius: 1rem;
 }
 
 .socials i {
-  font-size: 2rem;
+  font-size: 3rem;
+  border: 1px solid;
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .socials a:hover,
@@ -163,17 +177,38 @@ button {
   cursor: pointer;
 }
 
-.socials a:nth-child(1) {
-  color: orange;
+.socials a:nth-child(1):hover {
+  color: #ea7b08;
+  border-color: #ea7b08;
 }
-.socials a:nth-child(2) {
-  color: blue;
+.socials a:nth-child(2):hover {
+  color: #4065ad;
+  border-color: #4065ad;
 }
-.socials a:nth-child(3) {
-  color: lightskyblue;
+.socials a:nth-child(3):hover {
+  color: #4360f0;
+  border-color: #4360f0;
 }
-.socials a:nth-child(4) {
-  color: palevioletred;
+.socials a:nth-child(4):hover {
+  color: #d71e65;
+  border-color: #d71e65;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.contact-details h3 {
+  font-weight: 500;
+}
+
+.contact-details a:hover,
+.contact-details a:focus {
+  text-decoration: underline;
 }
 
 /* SCORE BADGE */
@@ -182,11 +217,13 @@ button {
 .wrapper {
   width: 100%;
   flex: 1;
+  min-height: 80vh;
   display: flex;
-  padding: 1rem;
+  padding: 3rem 1rem;
   justify-content: space-evenly;
   align-items: center;
   background-color: #f1dfd1;
+
   background-image: linear-gradient(315deg, #f1dfd1 0%, #f6f0ea 74%);
 }
 
