@@ -159,6 +159,8 @@ async function nextQuestion(questions, index) {
     return;
   }
 
+  updateCounter(index + 1);
+
   const { question, correct_answer, incorrect_answers } = questions[index];
 
   questionText.innerHTML = question;
@@ -202,7 +204,6 @@ async function checkAnswer(e, answer, index, questions) {
     await delayTimer(750);
     nextQuestion(questions, index + 1);
   }
-  updateCounter(index + 2);
 }
 
 // Update Score
