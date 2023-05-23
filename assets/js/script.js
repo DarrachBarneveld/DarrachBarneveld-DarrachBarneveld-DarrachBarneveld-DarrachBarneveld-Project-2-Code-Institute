@@ -1,6 +1,7 @@
 const categoryAnchors = Array.from(document.querySelectorAll(".category"));
 const categoryHeadline = document.getElementById("category-headline");
 
+// Load user medals
 document.addEventListener("DOMContentLoaded", () => {
   let currentMedals = JSON.parse(localStorage.getItem("medals"));
 
@@ -13,12 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Update score board medals
 document.addEventListener("DOMContentLoaded", () => {
   let currentMedals = JSON.parse(localStorage.getItem("medals"));
   if (!currentMedals) return;
   addMedalStyling(currentMedals);
 });
 
+// Add styling to home page score board
 function addMedalStyling(currentMedals) {
   currentMedals.forEach((object) => {
     const { category, easy, medium, hard } = object;
@@ -41,8 +44,6 @@ function addMedalStyling(currentMedals) {
   });
 }
 
-var headline = document.getElementById("category-headline");
-
 function changeText(e) {
   const { id } = e.target.closest("a");
   categoryHeadline.innerText = id;
@@ -52,6 +53,7 @@ function removeText(e) {
   categoryHeadline.innerText = "Choose a category to get started!";
 }
 
+// Category wheel styling listener functions
 categoryAnchors.forEach((anchor) => {
   anchor.addEventListener("mouseover", changeText);
   anchor.addEventListener("focusin", changeText);

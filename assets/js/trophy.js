@@ -1,3 +1,4 @@
+// Load intial medals form user storage
 document.addEventListener("DOMContentLoaded", () => {
   let currentMedals = JSON.parse(localStorage.getItem("medals"));
 
@@ -7,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Unlock trump card when all medals are obtained by checking category objects in storage
 function completedCategoryCheck(array) {
   for (const obj of array) {
     const { category, easy, medium, hard } = obj;

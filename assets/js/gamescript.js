@@ -49,6 +49,7 @@ let category;
 let correctAnswers = 0;
 let mode;
 
+// Switch Statement for dynamic page rendering based of url query string
 switch (url[1]) {
   case "music":
     category = "12";
@@ -131,6 +132,7 @@ async function fetchQuestions(difficulty) {
   }
 }
 
+// Initialise game with selected difficulty
 async function startGame(e) {
   e.preventDefault();
   const difficulty = document.querySelector(
@@ -149,6 +151,7 @@ async function startGame(e) {
   nextQuestion(results, 0);
 }
 
+// Next question load with delay timer for UX score feedback
 async function nextQuestion(questions, index) {
   if (questions.length <= index) {
     await delayTimer(500);
@@ -180,6 +183,7 @@ async function nextQuestion(questions, index) {
   });
 }
 
+// Function to check answer and update styling based on result
 async function checkAnswer(e, answer, index, questions) {
   const userAnswer = e.target.innerHTML;
 
@@ -191,16 +195,36 @@ async function checkAnswer(e, answer, index, questions) {
     nextQuestion(questions, index + 1);
   } else {
     e.target.style.background = "red";
-    await delayTimer(500);
+    const answersBtns = answersText.querySelectorAll(".btn");
+    const answerElement = findAnswerText(answer, answersBtns);
+    answerElement.style.background = "green";
+
+    await delayTimer(750);
     nextQuestion(questions, index + 1);
   }
-  updateCounter();
+  updateCounter(index + 2);
 }
 
-function updateCounter() {
-  counter.innerText = `${correctAnswers} / 10`;
+// Update Score
+function updateCounter(index) {
+  counter.innerText = `${correctAnswers} : Question ${index}`;
 }
 
+// Find the correct answer in the markup so styling can be added to the correct answer on an incorrect guess
+function findAnswerText(text, arrayAns) {
+  // This is needed to convert the html coded answer string into a readable string for comparison
+  const tempElement = document.createElement("div");
+  tempElement.innerHTML = text;
+
+  for (let i = 0; i < arrayAns.length; i++) {
+    if (arrayAns[i].innerHTML === tempElement.innerHTML) {
+      return arrayAns[i];
+    }
+  }
+  return null;
+}
+
+// Shuffle answers array for random distribution in html
 function shuffleArray(array) {
   for (var i = array.length - 1; i > 0; i--) {
     var j = Math.floor(Math.random() * (i + 1));
@@ -213,6 +237,7 @@ function shuffleArray(array) {
   return array;
 }
 
+// Delay timer for UX feedback
 function delayTimer(delay) {
   return new Promise((resolve) => {
     const disableBtns = Array.from(document.getElementsByTagName("button"));
@@ -229,6 +254,7 @@ function delayTimer(delay) {
   });
 }
 
+// End game and give user score and rewards
 function endQuiz() {
   let html;
   let reward;
@@ -248,7 +274,7 @@ function endQuiz() {
     />
   `;
     reward = { category: url[1], easy: true };
-    storeBadges(reward);
+    storeMedals(reward);
   }
 
   if (correctAnswers >= 8 && mode === "medium") {
@@ -261,7 +287,7 @@ function endQuiz() {
     />
 `;
     reward = { category: url[1], medium: true };
-    storeBadges(reward);
+    storeMedals(reward);
   }
 
   if (correctAnswers >= 8 && mode === "hard") {
@@ -274,14 +300,15 @@ function endQuiz() {
     />
   `;
     reward = { category: url[1], hard: true };
-    storeBadges(reward);
+    storeMedals(reward);
   }
 
   gameArea.innerHTML = html;
   btnContainer.classList.remove("hidden");
 }
 
-function storeBadges(reward) {
+// Store user medals
+function storeMedals(reward) {
   let currentMedals = JSON.parse(localStorage.getItem("medals"));
 
   if (!currentMedals) {
@@ -293,6 +320,7 @@ function storeBadges(reward) {
   }
 }
 
+// Function for updating user medal array with current won reward
 function mergeMedals(reward, medalArray) {
   {
     const { category, ...props } = reward;
