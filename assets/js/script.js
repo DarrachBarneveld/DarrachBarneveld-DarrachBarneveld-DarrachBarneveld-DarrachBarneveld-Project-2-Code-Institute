@@ -1,3 +1,6 @@
+const categoryAnchors = Array.from(document.querySelectorAll(".category"));
+const categoryHeadline = document.getElementById("category-headline");
+
 document.addEventListener("DOMContentLoaded", () => {
   let currentMedals = JSON.parse(localStorage.getItem("medals"));
 
@@ -37,3 +40,20 @@ function addMedalStyling(currentMedals) {
     }
   });
 }
+
+var headline = document.getElementById("category-headline");
+
+function changeText(e) {
+  const { id } = e.target.closest("a");
+  categoryHeadline.innerText = id;
+}
+
+function removeText(e) {
+  categoryHeadline.innerText = "Choose a category to get started!";
+}
+
+categoryAnchors.forEach((anchor) => {
+  anchor.addEventListener("mouseover", changeText);
+  anchor.addEventListener("focusin", changeText);
+  anchor.addEventListener("mouseout", removeText);
+});

@@ -9,6 +9,7 @@ const replayBtn = document.getElementById("replay");
 const iconContainer = document.querySelector(".icon-container");
 const fieldset = document.getElementsByTagName("fieldset").item(0);
 const loader = document.getElementById("loader");
+const counter = document.getElementById("counter");
 
 const logoImage = document.getElementById("icon");
 const headline = document.getElementById("headline");
@@ -144,6 +145,7 @@ async function startGame(e) {
   const { results } = await fetchQuestions(difficulty);
   loader.classList.add("hidden");
   questionText.classList.remove("hidden");
+  counter.classList.remove("hidden");
   nextQuestion(results, 0);
 }
 
@@ -160,10 +162,12 @@ async function nextQuestion(questions, index) {
 
   const answers = [...incorrect_answers, correct_answer];
 
-  const html = `  <button class="btn">${answers[0]}</button>
-        <button class="btn">${answers[1]}</button>
-        <button class="btn">${answers[2]}</button>
-        <button class="btn">${answers[3]}</button>`;
+  const shuffledAnswers = shuffleArray(answers);
+
+  const html = `  <button class="btn">${shuffledAnswers[0]}</button>
+        <button class="btn">${shuffledAnswers[1]}</button>
+        <button class="btn">${shuffledAnswers[2]}</button>
+        <button class="btn">${shuffledAnswers[3]}</button>`;
 
   answersText.innerHTML = html;
 
@@ -190,6 +194,23 @@ async function checkAnswer(e, answer, index, questions) {
     await delayTimer(500);
     nextQuestion(questions, index + 1);
   }
+  updateCounter();
+}
+
+function updateCounter() {
+  counter.innerText = `${correctAnswers} / 10`;
+}
+
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+
+  return array;
 }
 
 function delayTimer(delay) {
