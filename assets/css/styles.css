@@ -303,10 +303,12 @@ main {
   font-size: 1.4rem;
 }
 
-.category:hover {
+.category:hover,
+.category:focus {
   transition: all 150ms;
-  filter: brightness(1.5);
+  filter: brightness(2);
   cursor: pointer;
+  outline: none;
 }
 
 .medal-container {
