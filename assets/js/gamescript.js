@@ -45,9 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// GLOBAL VARIABLES
 let category;
 let correctAnswers = 0;
 let mode;
+let userAnswers = [];
 
 // Switch Statement for dynamic page rendering based of url query string
 switch (url[1]) {
@@ -153,7 +155,7 @@ async function startGame(e) {
 
 // Next question load with delay timer for UX score feedback
 async function nextQuestion(questions, index) {
-  if (questions.length <= index) {
+  if (2 <= index) {
     await delayTimer(500);
     endQuiz();
     return;
@@ -186,10 +188,24 @@ async function nextQuestion(questions, index) {
 }
 
 // Function to check answer and update styling based on result
-async function checkAnswer(e, answer, index, questions) {
+async function checkAnswer(e, correctAnswer, index, questions) {
   const userAnswer = e.target.innerHTML;
 
-  if (userAnswer === answer) {
+  // This is needed to convert the html coded answer string into a readable string for comparison
+  const tempElement = document.createElement("div");
+  tempElement.innerHTML = correctAnswer;
+
+  console.log(questions);
+  // Updating User Answer Array for end results
+  const answerData = {
+    question: questions[index].question,
+    answer: userAnswer,
+    correctAnswer: tempElement.innerHTML,
+    score: userAnswer === tempElement.innerHTML,
+  };
+  userAnswers.push(answerData);
+
+  if (userAnswer === correctAnswer) {
     e.target.style.background = "green";
     correctAnswers++;
 
@@ -198,7 +214,7 @@ async function checkAnswer(e, answer, index, questions) {
   } else {
     e.target.style.background = "red";
     const answersBtns = answersText.querySelectorAll(".btn");
-    const answerElement = findAnswerText(answer, answersBtns);
+    const answerElement = findAnswerText(tempElement.innerHTML, answersBtns);
     answerElement.style.background = "green";
 
     await delayTimer(750);
@@ -213,12 +229,8 @@ function updateCounter(index) {
 
 // Find the correct answer in the markup so styling can be added to the correct answer on an incorrect guess
 function findAnswerText(text, arrayAns) {
-  // This is needed to convert the html coded answer string into a readable string for comparison
-  const tempElement = document.createElement("div");
-  tempElement.innerHTML = text;
-
   for (let i = 0; i < arrayAns.length; i++) {
-    if (arrayAns[i].innerHTML === tempElement.innerHTML) {
+    if (arrayAns[i].innerHTML === text) {
       return arrayAns[i];
     }
   }
@@ -260,51 +272,109 @@ function endQuiz() {
   let html;
   let reward;
 
-  if (correctAnswers < 8) {
-    html = `    <h2>Better luck next time!</h2>
+  let container = document.createElement("div");
+  container.id = "game-over";
+
+  let heading = document.createElement("h2");
+  heading.textContent = "Better Luck Next Time!";
+  container.appendChild(heading);
+
+  let answerList = document.createElement("ol");
+  answerList.classList.add("game-answer-list");
+  container.appendChild(answerList);
+
+  userAnswers.forEach((object) => {
+    let answerElement = document.createElement("li");
+    answerElement.classList.add("game-answer");
+
+    !object.score && (answerElement.style.borderColor = "red");
+
+    const html = `
+            <h3 class="game-over-question">${object.question}</h3>
+            <div class="game-answer-container">
+            ${
+              object.score
+                ? `<div class="answers">
+            <p>
+              <strong>You:</strong> ${object.answer}
+            </p>
+          </div>
+          <span
+            ><i
+              style="font-size: 2rem; color: green"
+              class="fa-solid fa-circle-check"
+            ></i
+          ></span>`
+                : ` <div class="answers">
+                <p>
+                  <strong>You:</strong> ${object.answer}
+                </p>
+                <p><strong>Correct:</strong> ${object.correctAnswer}</p>
+              </div>
+              <span
+                ><i
+                  style="font-size: 2rem; color: red"
+                  class="fa-solid fa-circle-xmark"
+                ></i
+              ></span>`
+            }
+              
+            </div>
     `;
-  }
+    answerElement.innerHTML = html;
+    answerList.appendChild(answerElement);
+  });
 
-  if (correctAnswers >= 8 && mode === "easy") {
-    html = `
-    <h3>You Won!</h3>
-    <img
-      class="badge"
-      src="assets/images/bronze.png"
-      alt="Picture of a bronze medal"
-    />
-  `;
-    reward = { category: url[1], easy: true };
-    storeMedals(reward);
-  }
+  gameArea.innerHTML = "";
+  gameArea.appendChild(container);
 
-  if (correctAnswers >= 8 && mode === "medium") {
-    html = `
-    <h3>You Won!</h3>
-    <img
-      class="badge"
-      src="assets/images/silver.png"
-      alt="Picture of a silver medal"
-    />
-`;
-    reward = { category: url[1], medium: true };
-    storeMedals(reward);
-  }
+  //   if (correctAnswers < 7) {
+  //     html = `     <div id="game-over">
+  //                   <h2>Better luck next time!</h2>
+  //                   <ol class="game-answer-list">
 
-  if (correctAnswers >= 8 && mode === "hard") {
-    html = `
-    <h3>You Won!</h3>
-    <img
-      class="badge"
-      src="assets/images/gold.png"
-      alt="Picture of a gold medal"
-    />
-  `;
-    reward = { category: url[1], hard: true };
-    storeMedals(reward);
-  }
+  //     `;
+  //   }
 
-  gameArea.innerHTML = html;
+  //   if (correctAnswers >= 7 && mode === "easy") {
+  //     html = `
+  //     <h3>You Won!</h3>
+  //     <img
+  //       class="badge"
+  //       src="assets/images/bronze.png"
+  //       alt="Picture of a bronze medal"
+  //     />
+  //   `;
+  //     reward = { category: url[1], easy: true };
+  //     storeMedals(reward);
+  //   }
+
+  //   if (correctAnswers >= 7 && mode === "medium") {
+  //     html = `
+  //     <h3>You Won!</h3>
+  //     <img
+  //       class="badge"
+  //       src="assets/images/silver.png"
+  //       alt="Picture of a silver medal"
+  //     />
+  // `;
+  //     reward = { category: url[1], medium: true };
+  //     storeMedals(reward);
+  //   }
+
+  //   if (correctAnswers >= 7 && mode === "hard") {
+  //     html = `
+  //     <h3>You Won!</h3>
+  //     <img
+  //       class="badge"
+  //       src="assets/images/gold.png"
+  //       alt="Picture of a gold medal"
+  //     />
+  //   `;
+  //     reward = { category: url[1], hard: true };
+  //     storeMedals(reward);
+  //   }
+
   btnContainer.classList.remove("hidden");
 }
 

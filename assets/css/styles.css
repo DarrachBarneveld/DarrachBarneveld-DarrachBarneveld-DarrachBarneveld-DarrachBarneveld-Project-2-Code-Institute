@@ -479,7 +479,49 @@ main {
   display: none;
 }
 
-/* BADGES */
+/* GAME-OVER */
+
+#game-over {
+  background-color: white;
+  padding: 1rem;
+  box-shadow: var(--primary-shadow);
+  border-radius: 10px;
+}
+
+.game-answer-list {
+  font-weight: bolder;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.game-over-question {
+  font-weight: bolder;
+  border-bottom: 1px solid rgba(50, 50, 93, 0.25);
+}
+
+.game-answer-container {
+  display: flex;
+  padding: 0.25rem;
+  font-size: medium;
+  font-weight: 400;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.answers {
+  flex: 1;
+  text-align: left;
+}
+.game-answer {
+  border: 2px solid green;
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+/* TROPHY MEDALS */
 
 .badge-grid {
   width: 100%;
