@@ -155,7 +155,7 @@ async function startGame(e) {
 
 // Next question load with delay timer for UX score feedback
 async function nextQuestion(questions, index) {
-  if (2 <= index) {
+  if (questions.length <= index) {
     await delayTimer(500);
     endQuiz();
     return;
@@ -269,25 +269,55 @@ function delayTimer(delay) {
 
 // End game and give user score and rewards
 function endQuiz() {
-  let html;
   let reward;
 
-  let container = document.createElement("div");
-  container.id = "game-over";
+  gameArea.innerHTML = "";
 
-  let heading = document.createElement("h2");
-  heading.textContent = "Better Luck Next Time!";
-  container.appendChild(heading);
+  let heading = document.createElement("h1");
+  heading.classList.add("headline");
+  gameArea.appendChild(heading);
+
+  if (correctAnswers < 7) {
+    heading.textContent = "Better Luck Next Time!";
+  }
+  if (correctAnswers >= 7) {
+    heading.textContent = "You Won!";
+    const medalImage = document.createElement("img");
+    medalImage.classList.add("badge");
+
+    if (mode === "easy") {
+      medalImage.src = "assets/images/bronze.png";
+      medalImage.alt = "Picture of a bronze medal";
+      reward = { category: url[1], easy: true };
+      storeMedals(reward);
+    }
+    if (mode === "medium") {
+      medalImage.src = "assets/images/silver.png";
+      medalImage.alt = "Picture of a silver medal";
+      reward = { category: url[1], medium: true };
+      storeMedals(reward);
+    }
+    if (mode === "hard") {
+      medalImage.src = "assets/images/gold.png";
+      medalImage.alt = "Picture of a gold medal";
+      reward = { category: url[1], hard: true };
+      storeMedals(reward);
+    }
+    gameArea.appendChild(medalImage);
+  }
 
   let answerList = document.createElement("ol");
   answerList.classList.add("game-answer-list");
-  container.appendChild(answerList);
+  gameArea.appendChild(answerList);
 
   userAnswers.forEach((object) => {
     let answerElement = document.createElement("li");
     answerElement.classList.add("game-answer");
 
-    !object.score && (answerElement.style.borderColor = "red");
+    if (!object.score) {
+      answerElement.style.borderColor = "red";
+      answerElement.style.backgroundColor = "rgba(255, 54, 54, 0.3)";
+    }
 
     const html = `
             <h3 class="game-over-question">${object.question}</h3>
@@ -324,56 +354,6 @@ function endQuiz() {
     answerElement.innerHTML = html;
     answerList.appendChild(answerElement);
   });
-
-  gameArea.innerHTML = "";
-  gameArea.appendChild(container);
-
-  //   if (correctAnswers < 7) {
-  //     html = `     <div id="game-over">
-  //                   <h2>Better luck next time!</h2>
-  //                   <ol class="game-answer-list">
-
-  //     `;
-  //   }
-
-  //   if (correctAnswers >= 7 && mode === "easy") {
-  //     html = `
-  //     <h3>You Won!</h3>
-  //     <img
-  //       class="badge"
-  //       src="assets/images/bronze.png"
-  //       alt="Picture of a bronze medal"
-  //     />
-  //   `;
-  //     reward = { category: url[1], easy: true };
-  //     storeMedals(reward);
-  //   }
-
-  //   if (correctAnswers >= 7 && mode === "medium") {
-  //     html = `
-  //     <h3>You Won!</h3>
-  //     <img
-  //       class="badge"
-  //       src="assets/images/silver.png"
-  //       alt="Picture of a silver medal"
-  //     />
-  // `;
-  //     reward = { category: url[1], medium: true };
-  //     storeMedals(reward);
-  //   }
-
-  //   if (correctAnswers >= 7 && mode === "hard") {
-  //     html = `
-  //     <h3>You Won!</h3>
-  //     <img
-  //       class="badge"
-  //       src="assets/images/gold.png"
-  //       alt="Picture of a gold medal"
-  //     />
-  //   `;
-  //     reward = { category: url[1], hard: true };
-  //     storeMedals(reward);
-  //   }
 
   btnContainer.classList.remove("hidden");
 }

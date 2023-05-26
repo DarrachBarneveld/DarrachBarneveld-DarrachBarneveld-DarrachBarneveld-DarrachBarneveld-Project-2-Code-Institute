@@ -322,6 +322,7 @@ main {
 
 .badge {
   width: 30%;
+  max-width: 300px;
 }
 
 .icon-container {
@@ -343,11 +344,6 @@ main {
   width: 120px;
   height: 120px;
   animation: spin 2s linear infinite;
-}
-
-#headline {
-  font-size: 2rem;
-  margin-block: 1rem;
 }
 
 #form-area {
@@ -429,6 +425,12 @@ main {
   align-items: center;
 }
 
+.headline {
+  font-size: 2rem;
+  margin-block: 0.5rem;
+  padding: 0.5rem;
+}
+
 #question {
   font-size: 1.2rem;
 }
@@ -481,30 +483,25 @@ main {
 
 /* GAME-OVER */
 
-#game-over {
-  background-color: white;
-  padding: 1rem;
-  box-shadow: var(--primary-shadow);
-  border-radius: 10px;
-}
-
 .game-answer-list {
   font-weight: bolder;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  font-size: medium;
 }
 
 .game-over-question {
   font-weight: bolder;
   border-bottom: 1px solid rgba(50, 50, 93, 0.25);
+  padding-bottom: 0.5rem;
+  padding: 0.25rem;
 }
 
 .game-answer-container {
   display: flex;
   padding: 0.25rem;
-  font-size: medium;
   font-weight: 400;
   justify-content: center;
   align-items: center;
@@ -515,10 +512,16 @@ main {
   flex: 1;
   text-align: left;
 }
+
+.answers p {
+  margin-block: 0.25rem;
+}
+
 .game-answer {
   border: 2px solid green;
   border-radius: 10px;
   padding: 0.5rem;
+  background-color: rgba(89, 190, 89, 0.3);
 }
 
 /* TROPHY MEDALS */
@@ -662,7 +665,10 @@ main {
 }
 
 @media (max-width: 480px) {
-  #headline {
+  .headline {
     font-size: 1.4rem;
+  }
+  .game-answer-list {
+    font-size: small;
   }
 }
