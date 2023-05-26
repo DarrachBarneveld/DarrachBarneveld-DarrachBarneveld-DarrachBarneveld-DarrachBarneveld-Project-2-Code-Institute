@@ -20,12 +20,12 @@ function completedCategoryCheck(array) {
       badges[0].alt = "Picture of a bronze medal";
     }
     if (medium) {
-      badges[1].src = "assets/images/bronze.png";
-      badges[1].alt = "Picture of a bronze medal";
+      badges[1].src = "assets/images/silver.png";
+      badges[1].alt = "Picture of a silver medal";
     }
     if (hard) {
-      badges[2].src = "assets/images/bronze.png";
-      badges[2].alt = "Picture of a bronze medal";
+      badges[2].src = "assets/images/gold.png";
+      badges[2].alt = "Picture of a gold medal";
     }
     if (easy && medium && hard) {
       element.classList.add("badge-box");
@@ -35,9 +35,9 @@ function completedCategoryCheck(array) {
         <img src="assets/images/${category}.png" />
       </div>
       <div class="medal-container">
-        <img class="badge" src="assets/images/bronze.png" />
-        <img class="badge" src="assets/images/silver.png" />
-        <img class="badge" src="assets/images/gold.png" />
+        <img class="badge" src="assets/images/bronze.png" alt="Picture of a bronze medal" />
+        <img class="badge" src="assets/images/silver.png" alt="Picture of a silver medal" />
+        <img class="badge" src="assets/images/gold.png" alt="Picture of a gold medal"/>
       </div>`;
 
       element.innerHTML = html;

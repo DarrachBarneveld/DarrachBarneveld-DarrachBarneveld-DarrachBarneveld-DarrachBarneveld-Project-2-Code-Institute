@@ -197,7 +197,6 @@ async function checkAnswer(e, correctAnswer, index, questions) {
   const tempElement = document.createElement("div");
   tempElement.innerHTML = correctAnswer;
 
-  console.log(questions);
   // Updating User Answer Array for end results
   const answerData = {
     question: questions[index].question,
