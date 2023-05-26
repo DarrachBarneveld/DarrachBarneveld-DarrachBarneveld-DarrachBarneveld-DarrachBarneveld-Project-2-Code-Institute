@@ -8,9 +8,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!currentMedals) return;
   else {
     const badgeElement = document.getElementById("total-badges");
-    const totalbadges = currentMedals.length;
+    let totalMedals = 0;
+    currentMedals.forEach((object) => {
+      // Loop through objects and add medals by counting properties minus category
+      totalMedals += Object.keys(object).length - 1;
+    });
 
-    badgeElement.textContent = `${totalbadges}/21`;
+    badgeElement.textContent = `${totalMedals}/21`;
   }
 });
 

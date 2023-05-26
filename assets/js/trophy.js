@@ -12,8 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
 function completedCategoryCheck(array) {
   for (const obj of array) {
     const { category, easy, medium, hard } = obj;
+    const element = document.getElementById(category);
+    const badges = element.querySelectorAll(".badge");
+
+    if (easy) {
+      badges[0].src = "assets/images/bronze.png";
+      badges[0].alt = "Picture of a bronze medal";
+    }
+    if (medium) {
+      badges[1].src = "assets/images/bronze.png";
+      badges[1].alt = "Picture of a bronze medal";
+    }
+    if (hard) {
+      badges[2].src = "assets/images/bronze.png";
+      badges[2].alt = "Picture of a bronze medal";
+    }
     if (easy && medium && hard) {
-      const element = document.getElementById(category);
       element.classList.add("badge-box");
       element.classList.remove("none");
       const html = ` <h2 class="category-title">${category.toUpperCase()}</h2>
