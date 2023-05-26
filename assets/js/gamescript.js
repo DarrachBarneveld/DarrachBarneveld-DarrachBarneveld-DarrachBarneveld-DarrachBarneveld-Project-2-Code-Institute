@@ -10,6 +10,8 @@ const iconContainer = document.querySelector(".icon-container");
 const fieldset = document.getElementsByTagName("fieldset").item(0);
 const loader = document.getElementById("loader");
 const counter = document.getElementById("counter");
+const scoreCount = document.getElementById("score-count");
+const questionNumber = document.getElementById("question-count");
 
 const logoImage = document.getElementById("icon");
 const headline = document.getElementById("headline");
@@ -224,7 +226,16 @@ async function checkAnswer(e, correctAnswer, index, questions) {
 
 // Update Score
 function updateCounter(index) {
-  counter.innerText = `${correctAnswers} : Question ${index}`;
+  scoreCount.innerHTML = `<i
+  style="color: green"
+  class="fa-solid fa-circle-check"
+></i
+> ${correctAnswers}`;
+  questionNumber.innerHTML = ` <i
+  class="fa-solid fa-question"
+  style="color: blue"
+></i
+> ${index}`;
 }
 
 // Find the correct answer in the markup so styling can be added to the correct answer on an incorrect guess
