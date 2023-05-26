@@ -50,7 +50,7 @@ function changeText(e) {
 }
 
 function removeText(e) {
-  categoryHeadline.innerText = "Choose a category to get started!";
+  categoryHeadline.innerText = "Click a category segment";
 }
 
 // Category wheel styling listener functions
