@@ -6,7 +6,8 @@
 
 [Greek Gods Galore Live Page](https://darrachbarneveld.github.io/Project-1-Code-Institute/)
 
-Greek Gods Galore is an informative online resource that delves into the mythologies surrounding the 12 Greek gods who resided atop Mount Olympus. The site provides detailed accounts of each deity's characteristics, symbols, and legends, allowing readers to gain a deeper understanding of the ancient pantheon. This is a mock site and as such features a mailing list that is not currently active. The site was built by myself, an enthusiast of classical civilisation and mythic lore. It is a passion project as well as a project for the Code Institute's assessment.
+Welcome to Trivia Trumps, where your knowledge will be put to the test across various categories. Answer easy, medium, and hard questions to earn bronze, silver, and gold medals respectively. As you conquer each category, you'll unlock powerful colourful trump card displayed in the trophy room. Get ready to embark on a thrilling trivia adventure and prove yourself as the ultimate champion in Trivia Trumps!
+This was a particularly fun Javascript learning project as it showcases my passion for pub quizzes, knowledge and trump cards!
 
 ## Table of Contents
 
@@ -44,21 +45,20 @@ Greek Gods Galore is an informative online resource that delves into the mytholo
 
 ## Project Goals
 
-The construction of Greek Gods Galore website and brand was done for a key purpose. To create a community of educated individuals who shared a passion for all things Graeco.
+The primary goal of Trivia Trumps is to provide an entertaining and educational platform where players can test their knowledge, engage in friendly competition, and expand their understanding of various subjects.
 
 ### Business Goals
 
-- Build brand authority in the niche of Greek mythology
-- Educate and inform visitors about the 12 Greek gods and their significance in mythology
-- Build a community around the website, connecting with enthusiasts of Greek mythology
-- Create engaging and shareable content that attracts and retains visitors
+- Captivate and retain users by providing a highly engaging and addictive trivia experience
+- Serve as an educational tool, encouraging players to expand their knowledge and learn new facts across a wide range of subjects
+- To become an indispensable tool for pub quiz organizers and participants alike.
 
 ### User Goals
 
-- Learn about the history and mythology of the 12 Greek gods
-- Understand the characteristics, powers, and relationships of each god
-- Explore stories and myths associated with the 12 Greek gods
-- Engage with other enthusiasts of Greek mythology and exchange ideas and perspectives
+- Aim to challenge themselves and broaden their knowledge across various subjects
+- Users seek a fun and engaging experience
+- To engage in friendly competition with friends and family
+- Players strive to earn medals, unlock trump cards, and achieve high scores, aiming for a sense of accomplishment and recognition
 - Subscribe to a mailing list filled with content from scholars and researchers.
 
 [Back to Table of Contents](#table-of-contents)
@@ -67,42 +67,44 @@ The construction of Greek Gods Galore website and brand was done for a key purpo
 
 ### Target Audience
 
-- Enthusiasts of Greek mythology, history, and culture
-- Students and scholars of ancient Greek history and literature
-- Educators and teachers looking for resources to teach Greek mythology to their students
+- Trivia Enthusiasts: Individuals who have a passion for trivia
+- Pub Quiz Participants: People who frequently engage in pub quizzes and trivia nights
+- Knowledge Seekers: Individuals who have a strong desire to learn and expand their knowledge across various subjects
+- Educational Institutions: Schools, colleges, and educational institutions
+- Team Building Events: Companies and organizations that organize team building activities or corporate events
 
 ### User Requirements and Expectations
 
-- Accurate and reliable information presented in an accessible and engaging manner
-- Clear organization and navigation that allows users to easily find the information they are looking for
-- Mobile-friendly design that allows users to access the website from any device
-- Regular updates and new content to keep the website fresh and relevant
-- High-quality images and artwork depicting the 12 Greek gods and their stories
-- Accessibility features, such as alternative text for images and keyboard navigation, for users with disabilities
+- Diverse and Challenging Questions: A wide range of well-crafted trivia questions that cover various subjects and difficulty levels.
+- User-Friendly Interface: An intuitive and easy-to-navigate interface that allows for smooth gameplay, making it simple to select categories, answer questions, and track progress.
+- Accurate and Reliable Information: Users expect the trivia questions to be accurate and up-to-date, ensuring that the provided information is trustworthy and reliable.
+- Compatibility and Accessibility: Compatibility with various devices (mobile, tablet, desktop) and operating systems, as well as accessibility features to cater to individuals with different abilities, ensuring inclusivity and a broader user base.
+- Progress Tracking and Achievement System: Features that allow them to track their progress, view their scores, and earn achievements or medals as a testament to their trivia skills and accomplishments.
 
 ### User Stories
 
 #### Website/Business Owner:
 
-1. I want to create a comprehensive and authoritative resource on the 12 Greek gods, to establish my brand as a trusted source in the niche of Greek mythology.
-2. I want to attract a large and engaged audience, to increase website traffic and generate revenue through advertising, sponsorships, or affiliate marketing.
-3. I want to create high-quality content that is easily shareable, to increase brand awareness and attract new visitors to the website.
-4. I want to establish a strong community of enthusiasts of Greek mythology, to create a loyal and engaged audience that supports the growth and sustainability of the website.
+1. Develop an engaging platform with diverse and challenging trivia questions across multiple categories.
+2. Ensure a seamless user experience with an intuitive and visually appealing interface.
+3. Implement a flexible and scalable architecture to accommodate future growth.
+4. Track user progress, scores, and achievements to provide a personalized and rewarding experience.
 5. I want to continuously improve the website design, functionality, and content, to meet the evolving needs and expectations of my audience and stay ahead of the competition.
-6. I want to collaborate with other websites or influencers in the niche of Greek mythology, to increase the online presence and visibility of my brand and attract new visitors to the website.
+6. Enable social integration features, such as leaderboards and multiplayer options, to foster community and friendly competition.
+7. Implement effective marketing strategies to reach a wide audience and establish Trivia Trumps as a preferred trivia platform.
 
 #### New Users:
 
-1. I want to find a website that provides comprehensive and accessible information about the 12 Greek gods, so that I can learn about their stories, significance, and cultural impact.
-2. I want the website to have engaging and visually appealing content, such as high-quality images, interactive features, and compelling narratives, so that I can be inspired and entertained while learning.
-3. I want the website to offer additional resources, such as recommended books, articles, or videos, so that I can continue my learning and exploration beyond the website.
+1. As a new user, I want a user-friendly dashboard or homepage that provides clear navigation and options to explore different trivia categories and difficulty levels.
+2. As a new user, I want access to a variety of beginner-level trivia questions to help me get started and gradually increase the difficulty as I become more comfortable and knowledgeable.
+3. As a new user, I want an interactive onboarding tutorial or guide that familiarizes me with the gameplay mechanics, interface, and features of Trivia Trumps.
 
 #### Existing Users:
 
-12. I want the website to have a sense of community and social connection, with opportunities to interact with other enthusiasts, such as through social media, live events, or virtual discussions, so that I can feel part of a larger and supportive group.
-13. I want the website to provide exclusive or premium content via a mailing-list, such as behind-the-scenes interviews, expert analysis, or early access to new articles, so that I can feel valued and rewarded for my loyalty and engagement.
-14. I want the website to respond to my feedback and suggestions, either through direct communication or through regular updates and improvements, so that I can feel heard and involved in the evolution of the website.
-15. I want to find new and regularly updated content about the 12 Greek gods, so that I can deepen my knowledge and continue to be engaged and entertained by the website.
+1. As an existing user, I want the ability to access my previous game history and review my past scores, achievements, and progress.
+2. As an existing user, I want regular updates with new trivia questions, categories, or game modes to keep the content fresh and provide ongoing challenges.
+3. As an existing user, I want to be able to provide feedback or suggestions for improvement directly within the Trivia Trumps app or website, as I want to contribute to its ongoing development and enhancements.
+4. As an existing user, I want the ability to share my achievements, high scores, or interesting trivia facts with my social networks directly from the Trivia Trumps platform.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -110,31 +112,31 @@ The construction of Greek Gods Galore website and brand was done for a key purpo
 
 ### Design Choices
 
-To design this website, I conducted research on other websites that provide information about the 12 Greek gods. I explored different layouts, font styles, and color schemes to determine what would best appeal to our target audience. Ultimately I chose a simple single page layout to enhance navigation and a sticky header. This proved the most responsively friendly design.
+The initial design phase went through two stages. The initial inception of the trivia game was to be centred around Australia. The game was to have users answer questions about Australian wildlife and conquer the respective territories of Australia on an interactive map. You would collect Trump cards with information about the different states. This initial design choice can be seen in the final product. The design was also heavily inspired by trivia crack a mobile game as well as trivial pursuit. Players collect colourful segments and trump cards to conquer the wheel. Instead of states it is now category trump cards.
 
 Some websites visited for reference are:
 
-1. [Theoi](https://www.theoi.com/)
-2. [Greek Mythology](https://www.greekmythology.com/)
-3. [Greek Gods and Goddesses](https://greekgodsandgoddesses.net/)
+1. [Trivia Crack](https://triviacrack.com/)
+2. [Australia Guide](https://www.australias.guide/qld/maps/)
 
 ### Colours
 
-Using other websites as a reference as well as the inspiration of ancient statues, ruins and artefacts I went for a nude colour scheme. [Venngage's Accessible color palette generator](https://venngage.com/tools/accessible-color-palette-generator).
+The Colour Scheme was based off the initial Trivia Crack game. [Trivia Crack](https://triviacrack.com/)
 
-Primary Colours - #f2e9cc / #ffffff / #dac6b7
+Main Colours - #3771b4 / #de3539 / #f4b335 / #6ec531 / #e36927 / #803788 / #66b9de / #ff69b4;
 
-Secondary Colours - #1c1c1c / #fffaf0
+Theme Colours - #533b7c / #f4e8df
 
 All colours were checked using [Accessible Webs Contrast Checker](https://accessibleweb.com/color-contrast-checker/). This ensured the page was compliant to WCAG AAA standards.
 
-![Colour scheme](documentation/colour-scheme.webp)
+![Main](documentation/main-colour-scheme.webp)
+![Theme](documentation/theme-colour-scheme.webp)
 
 ### Fonts
 
 All fonts used were sourced and imported from [Google Fonts](https://fonts.google.com/) library.
 
-The main text font used was Lato with a sans-serif fallback. The lightweight Lato was a design choice to offset the bolder titles. All headings and sub-headings were initially designed with Castoro Titling but was later switched to Quattrocento as it featured a bold style.
+All font used is Ubuntu with a sans-serif fallback.
 
 ### Structure
 
