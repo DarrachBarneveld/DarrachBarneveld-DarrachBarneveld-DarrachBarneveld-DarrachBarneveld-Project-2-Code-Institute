@@ -279,6 +279,18 @@ main {
   outline: none;
 }
 
+.category-link {
+  font-size: large;
+  font-weight: bold;
+}
+
+.category-link:hover,
+.category-link:focus {
+  filter: hue-rotate(180deg);
+  text-decoration: underline;
+  transition: 300ms;
+}
+
 .score-box {
   display: flex;
   flex-direction: column;
