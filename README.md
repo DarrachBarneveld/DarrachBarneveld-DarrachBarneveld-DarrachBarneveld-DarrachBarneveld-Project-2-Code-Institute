@@ -140,94 +140,104 @@ All font used is Ubuntu with a sans-serif fallback.
 
 ### Structure
 
-The structure of the page follows a basic and easy to follow flow. The design choice to remain on a single page meant the user could follow a journey as they scrolled through the page. The content was split into 5 distinct sections.
+The main structure was designed with the mobile first development mindset in mind.
+
+The site structure was inspired by reactive sites built with JS frameworks. I wanted a dynamic SPA feel to the user experience. The main page is a simple map/wheel with a scoreboard listing categories. I wanted users to interact with the elements on the page and choose segments to select categories. There is a simple header for navgation, main contents, and a footer. The game screen is dynamically generated depending on search parameters and the questions are shown 1 by 1.
+
+### Index
 
 1. Header/Navigation
-2. Hero Section
-3. Introduction Section
-4. Gods Section
-5. Subscribe & More Info Section.
-6. Footer
+2. Main Section / Wheel + Scoreboard
+3. Footer
 
-There were also two further supplementary sections to provide a more well rounded experience. A 404 page was designed to route all traffic that visited a broken link back to the homepage and a success section for when the user filled out the subscription form.
+### Game
+
+1. Header/Navigation
+2. Main Section / Dynamic Questions. Inspired by the React Framework.
+3. Footer
+
+### Trophies
+
+1. Header/Navigation
+2. Main Section / Grid Trump card layout
+3. Footer
+
+There were also two further supplementary sections to provide a more well rounded experience. A 404 page was designed to route all traffic back to the home page if they visited an unknown url.
 
 #### Header Section
 
 1. Text Logo featured on the left of the header.
 2. Navigation items to the left hand side.
-3. Sticky header that allows the users to easily navigate the website even when scrolling.
 
-#### Hero Section
+#### Index Section
 
-1. Large background image with engaging and descriptive title.
-2. Animated image of a renaissance painting of the 12 Greek Gods.
+1. Large Map/Wheel interactive image featuring category segements. Located on the left
+2. Scoreboard listing categories and medal count for each. Located on the right
 
-#### Introduction / History Section
+#### Game Section
 
-1. Paragraph describing the Gods.
-2. Informative embedded video sourced from [The Life Guide](https://www.youtube.com/watch?v=Ri-AoKE42rw).
-3. Paragraph on Mount Olympus.
-4. Embedded Google Maps showing Mount Olympus on the map.
+##### Pre-game
 
-#### Gods Section
+1. Category Logo image
+2. Medal count
+3. Form for difficulty selection
+4. Start quiz and home navigation buttons
 
-1. Cards with images of the 12 Greek Olypmic Gods.
-2. Cards link to each section of the page that describes them in more detail.
-3. Description of the gods.
+##### During-game
 
-#### Subscription Section
-
-1. Form for subscribing to the mailing list.
-2. Mock Articles showcasing the content received via subscription.
+1. Category Logo image
+2. Score and Question Count
+3. Question
+4. Answer buttons
 
 #### Footer Section
 
-1. Greek Gods Galore Logo
-2. Social Icons
-3. Email contact of the website founder/creator.
+1. Social Icons
+2. Contact Information of the developer
+3. Copywrite claims
 
 ### Wireframes
 
 ### Index
 
 <details><summary>Mobile</summary>
-<img src="documentation/wireframe-mobile-index.webp">
+<img src="documentation/wireframe/index-mobile.webp">
 </details>
 
 <details><summary>iPad/Medium Screen</summary>
-<img src="documentation/wireframe-medium-index.webp">
+<img src="documentation/wireframe/index-desktop.webp">
 </details>
 
 <details><summary>Desktop</summary>
-<img src="documentation/wireframe-desktop-index.webp">
+<img src="documentation/wireframe/index-desktop.webp">
 </details>
 
-### Success
+### Game
 
 <details><summary>Mobile</summary>
-<img src="documentation/wireframe-mobile-success.webp">
+<img src="documentation/wireframe/game-mobile.webp">
 </details>
 
 <details><summary>iPad/Medium Screen</summary>
-<img src="documentation/wireframe-mobile-success.webp">
+<img src="documentation/wireframe/game-desktop.webp">
 </details>
 
 <details><summary>Desktop</summary>
-<img src="documentation/wireframe-desktop-success.webp">
+<img src="documentation/wireframe/game-desktop.webp">
 </details>
 
-### 404
+### Trophies
 
 <details><summary>Mobile</summary>
-<img src="documentation/wireframe-mobile-index.webp">
+<img src="documentation/wireframe/trophy-mobile.webp">
 </details>
 
 <details><summary>iPad/Medium Screen</summary>
-<img src="documentation/wireframe-mobile-404.webp">
+<img src="documentation/wireframe/trophy-desktop.webp">
 </details>
 
 <details><summary>Desktop</summary>
-<img src="documentation/wireframe-desktop-404.webp">
+<img src="documentation/wireframe/trophy-desktop.webp">
 </details>
 
 [Back to Table of Contents](#table-of-contents)
@@ -238,25 +248,23 @@ There were also two further supplementary sections to provide a more well rounde
 
 - HTML
 - CSS
+- Javascript
 
 ### Frameworks & Tools
 
 - [Git](https://git-scm.com/)
 - [GitHub](https://github.com/)
 - [VS Code](https://code.visualstudio.com/)
-- [Gitpod - Cloud IDE](https://www.gitpod.io/)
 - [Balsamiq - Wireframe](https://balsamiq.com/wireframes/)
 - [Google Fonts](https://fonts.google.com/)
 - [Font Awesome](https://fontawesome.com/)
 - [Favicon.io - favicon generator](https://favicon.io/)
-- [Google Maps](https://www.google.com/maps)
-- [Youtube](https://youtube.com/)
-- [Photopea](https://www.photopea.com/)
+- [Coolors - Theme generator](https://coolors.co/)
+- [Open Trivia Database](https://opentdb.com/api_config.php)
 - [Chat-GPT](https://chat.openai.com/)
 - [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - [W3C Markup Validation Service](https://validator.w3.org/)
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
-- [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
 - [Wave Accessibility Tool](https://wave.webaim.org/)
 
 [Back to Table of Contents](#table-of-contents)
