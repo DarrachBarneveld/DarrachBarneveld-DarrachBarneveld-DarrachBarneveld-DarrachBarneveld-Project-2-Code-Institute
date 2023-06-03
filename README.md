@@ -277,97 +277,69 @@ There were also two further supplementary sections to provide a more well rounde
 
 - Main header for all pages.
 - Logo and navigation links which bring users to different page sections.
-- Interactive colour wheel and category headline links to different quiz pages
+- How to play modal link
 
-#### Desktop & Larger Screens
+#### Desktop, Tablet & Larger Screens
 
 ![Logo and navbar](documentation/screens/header-desktop.webp)
 
-#### Tablet, Mobile and Smaller Screens
+#### Mobile and Smaller Screens
 
 ![Logo and navbar](documentation/screens/header-mobile.webp)
 
-### Hero Section
+### Index Page
 
-- Displays a large and high quality image as a background to set the tone of ancient greece.
-- Large, descriptive and engaging headlines immediately intrigue user curiosity and inform them of the site's content.
-- Animated image of a renaissance painting of the 12 Greek Gods. Draws attention through motion.
+- Interactive navigation colour wheel with category tooltip for description
+- Score Sheet with category medal list and links to quiz pages
 
-#### Desktop & Larger Screens
+#### Desktop, Tablet & Larger Screens
 
-![Hero Section](documentation/screens/hero-desktop.webp)
+![Index Section](documentation/screens/index-desktop.webp)
 
-#### Tablet, Mobile and Smaller Screens
+#### Mobile and Smaller Screens
 
-![Hero Section](documentation/screens/hero-mobile.webp)
+![Index Section](documentation/screens/index-mobile.webp)
 
-### History Section
+### Game Page
 
-#### Desktop & Larger Screens
+#### Desktop, Tablet & Larger Screens
 
-![History Section](documentation/screens/history-desktop.webp)
-
-#### Video Area
-
-- Short paragraph to describe who the Greek gods are.
-- Quote from Aristotle
-- Embedded youtube video to give an in depth analysis of the gods
+![Game Section](documentation/screens/game-desktop.webp)
 
 #### Tablet, Mobile and Smaller Screens
 
-![History Section](documentation/screens/history-mobile-1.webp)
+![Game Section](documentation/screens/game-mobile-1.webp)
 
-#### Map Area
+#### Pre-game
 
-- Short paragraph on where the gods lived
-- Embedded Google maps on location of Mount Olympus
+- Category Logo
+- Medals obtained
+- Difficulty selector
+- Home and play buttons
 
-#### Tablet, Mobile and Smaller Screens
+#### During-game
 
-![History Section](documentation/screens/history-mobile-2.webp)
+- Questions
+- Question Buttons
 
-### Gods Section
+#### Post-game
 
-#### Card Area
+- Potential Reward and Score
+- Correct answer list
+- Replay and return buttons
 
-- 12 cards with an artist rendition of the 12 greek gods
-- Links to more information on each god
+### Trophy Page
 
-#### Desktop & Larger Screens
+#### Desktop, Tablet & Larger Screens
 
-![Gods Section](documentation/screens/gods-desktop.webp)
+![Trophy Section](documentation/screens/trophy-desktop.webp)
 
-#### Tablet, Mobile and Smaller Screens
+#### Mobile and Smaller Screens
 
-![Gods Section](documentation/screens/gods-mobile.webp)
+![Trophy Section](documentation/screens/trophy-mobile.webp)
 
-#### Description Area
-
-- 12 cards with the name of each god and their role
-- Short description about each god
-
-#### Desktop & Larger Screens
-
-![Gods Description Section](documentation/screens/gods-description-desktop.webp)
-
-#### Tablet, Mobile and Smaller Screens
-
-![Gods Description Section](documentation/screens/gods-description-mobile.webp)
-
-### Contact Section
-
-- A subscription form that allows users to sign up to a mailing service.
-- Different rates based on frequency of mail
-- Showcasing 3 articles that represent the content delivered.
-- Each article links to external sites
-
-#### Desktop & Larger Screens
-
-![Contact Section](documentation/screens/contact-desktop.webp)
-
-#### Tablet, Mobile and Smaller Screens
-
-![Contact Section](documentation/screens/contact-mobile.webp)
+- 8 category trump cards listed
+- Medal count and unlocked card status
 
 ### Footer
 
@@ -376,28 +348,9 @@ There were also two further supplementary sections to provide a more well rounde
 - Social icons for the web page
 - Email contact form
 
-#### Desktop & Larger Screens
+#### Desktop, Tablet & Mobile
 
-![Contact Section](documentation/screens/footer-desktop.webp)
-
-#### Tablet, Mobile and Smaller Screens
-
-![Contact Section](documentation/screens/footer-mobile.webp)
-
-### Success Page
-
-- Upon submission of the mailing list subscription a user is brought to this page
-- Shows the user that their subscription was successful.
-- Describes to the user that the site is a mock site and has a navigation back to home page button.
-- Consistent header and footer from main index page.
-
-#### Desktop & Larger Screens
-
-![Success Section](documentation/screens/success-desktop.webp)
-
-#### Tablet, Mobile and Smaller Screens
-
-![Success Section](documentation/screens/success-mobile.webp)
+![Contact Section](documentation/screens/footer.webp)
 
 ### 404 Page
 
@@ -417,9 +370,9 @@ There were also two further supplementary sections to provide a more well rounde
 
 The following features could be implemented in the future but are beyond the scope of this project.
 
-- User subscription and account creation features that allow users to create a personal profile, save their favourite articles or quizzes, receive personalised recommendations and updates.
-- Interactive quizzes or games related to Greek mythology, such as personality tests to determine which Greek god or goddess you are most like.
-- A forum or blog that hosts user-generated content, such as fan art, fan fiction, or reviews of books or movies inspired by Greek mythology, to foster a sense of community and engagement among users.
+- Users can play against friends in a live play arena developed with socket.io or other libraries.
+- Users can create more secure accounts with passwords and upload avatar icons or pictures
+- Users can submit potential questions
 
 [Back to Table of Contents](#table-of-contents)
 
