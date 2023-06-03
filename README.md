@@ -308,7 +308,7 @@ There were also two further supplementary sections to provide a more well rounde
 
 #### Tablet, Mobile and Smaller Screens
 
-![Game Section](documentation/screens/game-mobile-1.webp)
+![Game Section](documentation/screens/game-mobile.webp)
 
 #### Pre-game
 
@@ -574,59 +574,41 @@ You can run this repository locally:
 
 ## Credits
 
-### Copy
-
-All copy on this website was written by Chat GPT. The copy was prompted by myself to give brief descriptions of each god as well as where they lived, thier history and personal attributes.
-
 ### Images
 
-- [Hero Background](https://wallpaperaccess.com/greece-ruins) by [Wallpaper Access](https://wallpaperaccess.com/greece-ruins)
+- All Category Images by [FlatIcon](https://www.flaticon.com/icons)
     <details><summary>Hero Background</summary>
     <img src="assets/images/hero-background.webp">
     </details>
 
-- [Hero Image](https://commons.wikimedia.org/wiki/File:La_dispute_de_Neptune_et_Ath%C3%A9na.jpg) by [Jacob Jordaens Wikimedia](https://commons.wikimedia.org/wiki/File:La_dispute_de_Neptune_et_Ath%C3%A9na.jpg)
+- [Medal Images](https://www.hiclipart.com/free-transparent-background-png-clipart-pwwor) by [HiClipArt](www.hiclipart.com)
   <details><summary>Hero Image</summary>
   <img src="assets/images/12olympians.webp">
   </details>
 
-- [Gods](https://www.freepik.com/free-vector/ancient-greece-gods-cartoon-set_6207098.htm#query=greek%20gods&position=1&from_view=keyword&track=ais) by [Macrovector at Freepik](https://www.freepik.com/free-vector/ancient-greece-gods-cartoon-set_6207098.htm#query=greek%20gods&position=1&from_view=keyword&track=ais)
-  <details><summary>Hero Image</summary>
-  <img src="assets/images/gods/gods.webp">
-  </details>
+### Icons
 
-- [Hercules](https://wandervirtually.com/the-story-of-hercules/) by [Wander Virtually](https://wandervirtually.com/the-story-of-hercules/)
-  <details><summary>Hero Image</summary>
-  <img src="assets/images/herakles.webp">
-  </details>
+- All Icons Are sourced from [FontAwesome](https://fontawesome.com/icons)
 
-### Video
+### Questions
 
-- [Greek Gods Explained in 12 Minutes](https://www.youtube.com/watch?v=Ri-AoKE42rw&embeds_euri=http%3A%2F%2F127.0.0.1%3A5500%2F&source_ve_path=MjM4NTE&feature=emb_title) by [The Life Guide](https://www.youtube.com/watch?v=Ri-AoKE42rw&embeds_euri=http%3A%2F%2F127.0.0.1%3A5500%2F&source_ve_path=MjM4NTE&feature=emb_title)
-
-### Map
-
-- [Google Maps](https://www.google.com/maps)
-
-- [Back to Table of Contents](#table-of-contents)
+- [Open Trivia Database](https://opentdb.com/api_config.php)
 
 ### Code
 
-- Starter template was the [Code Institute student template](https://github.com/Code-Institute-Org/gitpod-full-template)
-- Hero image animation was inspired by [Hyperplexed](https://www.youtube.com/watch?v=jMVhxBB3l0w&t=9s)
-- Embedded Youtube performance code was reconstructed from [Vumbnail](https://vumbnail.com/examples/srcdoc-iframe-for-lighthouse)
-- Embedding Google Maps code was reconstructed from [Google Maps Platform](https://developers.google.com/maps/documentation/embed/get-started)
-- CSS fixing of sticky header height was reconstructed from [Go make things](https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/)
-- ReadMe Layout and guide heavily inspired by [Mat Shephard](https://github.com/mat-shepherd/ci-pp1-nurture-seo#target-audience)
-- CSS root variables from [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:root)
-- Breakpoint templated used from [Gokulkrishh](https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488)
+- SVG colour wheel was learned from [FreeCodeCamp](https://www.freecodecamp.org/news/how-to-make-clickable-svg-map-html-css/)
+- Tooltip Design [W3Schools](https://www.w3schools.com/css/css_tooltip.asp#:~:text=A%20tooltip%20is%20often%20used,Bottom)
+- Popup Modal [W3Schools](https://www.w3schools.com/howto/howto_css_modals.asp)
+- Dynamic Page Rendering based on query string [Stack Overflow](https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript)
+- Immediate execution of functions for dynamic page render[Stack Overflow](https://stackoverflow.com/questions/11936816/execute-function-after-complete-page-load)
+- Indepth understanding of local storage for game stats [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
 ## Acknowledgements
 
 I would like to make the following thanks to all that helped me on this project:
 
-- My mentor Adegbenga Adeye for your clear and concise instruction. Showing me tools, guidance and finding errors in my projects
-- Alan Bushelland the April 2023 Student Cohort for their knowledge sharing, advice, and camaraderie during our weekly standup calls and in Slack
-- Fellow Students Alice Hillier, Emilia Dombek, Shane_Donlon, Tanguy L'Alexandre, Vitor Barbosa, Alan Yeates and Kurt McGoona for their constructive feedback
+- My mentor Adegbenga Adeye for suggestions for improvements. Showing me how to use tooltips for greater UI. The post quiz scores and correct answers feature.
+- Alan Bushelland the April 2023 Student Cohort for their continued support and feedback on my projects
+- Tanguy L'Alexandre, Ivette Mc Dermott, Georgina_5P, Ian Bowell, Devan_Cadman_4P for their peer review suggestions
 
 [Back to Table of Contents](#table-of-contents)
