@@ -2,9 +2,9 @@
 
 (Developer: Darrach Barneveld)
 
-![Mockup image](documentation/responsive-design-screenshot.webp)
+![Mockup image](documentation/responsive.webp)
 
-[Greek Gods Galore Live Page](https://darrachbarneveld.github.io/Project-1-Code-Institute/)
+[Trivia Trumps Live Page](https://darrachbarneveld.github.io/Project-2-Code-Institute/)
 
 Welcome to Trivia Trumps, where your knowledge will be put to the test across various categories. Answer easy, medium, and hard questions to earn bronze, silver, and gold medals respectively. As you conquer each category, you'll unlock powerful colourful trump card displayed in the trophy room. Get ready to embark on a thrilling trivia adventure and prove yourself as the ultimate champion in Trivia Trumps!
 This was a particularly fun Javascript learning project as it showcases my passion for pub quizzes, knowledge and trump cards!
@@ -277,7 +277,7 @@ There were also two further supplementary sections to provide a more well rounde
 
 - Main header for all pages.
 - Logo and navigation links which bring users to different page sections.
-- Sticky header to make navigation easy throughout the user journey.
+- Interactive colour wheel and category headline links to different quiz pages
 
 #### Desktop & Larger Screens
 
