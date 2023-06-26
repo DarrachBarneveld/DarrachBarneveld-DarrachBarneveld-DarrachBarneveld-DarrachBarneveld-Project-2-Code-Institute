@@ -664,6 +664,29 @@ main {
   border-radius: 10px;
 }
 
+/* 404 PAGE CSS */
+
+.gap {
+  gap: 1rem;
+}
+
+.header-404 {
+  margin: 1rem;
+}
+
+.image-box {
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--primary-shadow);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+}
+
 /* ANIMATIONS */
 
 @keyframes spin {
