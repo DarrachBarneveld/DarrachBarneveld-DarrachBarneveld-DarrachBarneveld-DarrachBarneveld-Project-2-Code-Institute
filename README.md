@@ -439,6 +439,7 @@ The website was tested on the following devices:
 
 - MacBook Pro 2020
 - Huawei P30
+- Aztine 15.6 portable monitor
 
 #### Cloud
 
@@ -544,7 +545,7 @@ The website was deployed using GitHub Pages:
 1. In the GitHub repository navigate to the Settings tab
 2. On the left-hand menu select Pages
 3. For the source select Branch: master
-4. After the web page refreshes automatically you will see a ribbon on the top saying: Your site is live at https://darrachbarneveld.github.io/Project-1-Code-Institute/
+4. After the web page refreshes automatically you will see a ribbon on the top saying: Your site is live at https://darrachbarneveld.github.io/Project-2-Code-Institute/
 
 You can for fork the repository:
 
