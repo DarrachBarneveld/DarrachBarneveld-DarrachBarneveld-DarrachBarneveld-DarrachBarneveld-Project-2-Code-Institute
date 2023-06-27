@@ -266,6 +266,7 @@ There were also two further supplementary sections to provide a more well rounde
 - [W3C Markup Validation Service](https://validator.w3.org/)
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 - [Wave Accessibility Tool](https://wave.webaim.org/)
+- [Responsive Image Tool](https://www.responsivebreakpoints.com/)
 
 [Back to Table of Contents](#table-of-contents)
 
