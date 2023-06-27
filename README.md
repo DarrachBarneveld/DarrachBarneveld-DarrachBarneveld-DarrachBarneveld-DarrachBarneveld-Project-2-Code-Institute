@@ -360,11 +360,11 @@ There were also two further supplementary sections to provide a more well rounde
 
 #### Desktop & Larger Screens
 
-![404 Section](documentation/screens/404-desktop.webp)
+![404 Section](documentation/screens/404-desktop.png)
 
 #### Tablet, Mobile and Smaller Screens
 
-![404 Section](documentation/screens/404-mobile.webp)
+![404 Section](documentation/screens/404-mobile.png)
 
 ### Potential Features
 
@@ -382,9 +382,9 @@ The following features could be implemented in the future but are beyond the sco
 
 Validator W3 was used to validate the HTML of the website. All pages pass with no errors and no warnings shown.
 
-- index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-1-Code-Institute%2F)
-- success.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-1-Code-Institute%2Fsuccess)
-- 404.html results [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-1-Code-Institute%2F404)
+- index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-2-Code-Institute%2F)
+- game.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-1-Code-Institute%2Fsuccess)
+- 404.html results [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-2-Code-Institute%2F404)
 
 ### CSS Validation
 
@@ -398,7 +398,7 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 
 - index.html [results](https://wave.webaim.org/report#/https://darrachbarneveld.github.io/Project-1-Code-Institute/)
 - success.html [results](https://wave.webaim.org/report#/https://darrachbarneveld.github.io/Project-1-Code-Institute/success)
-- 404.html results [results](https://wave.webaim.org/report#/https://darrachbarneveld.github.io/Project-1-Code-Institute/404)
+- 404.html results [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-2-Code-Institute%2F404&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 ### Performance
 
@@ -413,22 +413,22 @@ Google Lighthouse in Google's Chrome Developer Tools was used to test the perfor
 <img src="documentation/performance/index-mobile.webp">
 </details>
 
-### Success
+### Game
 
-<details><summary>Desktop</summary>
-<img src="documentation/performance/success-desktop.webp">
+<details><summary>Desktop</summary> 
+<img src="documentation/performance/index-desktop.webp">
 </details>
 <details><summary>Mobile</summary>
-<img src="documentation/performance/success-mobile.webp">
+<img src="documentation/performance/index-mobile.webp">
 </details>
 
 ### 404
 
 <details><summary>Desktop</summary>
-<img src="documentation/performance/404-desktop.webp">
+<img src="documentation/testing/404-desktop-lighthouse.webp">
 </details>
 <details><summary>Mobile</summary>
-<img src="documentation/performance/404-mobile.webp">
+<img src="documentation/testing/404-mobile-lighthouse.webp">
 </details>
 
 ### Device testing
@@ -460,8 +460,8 @@ The website was tested on the following browsers:
 
 - I want to test the site's usability and navigation, to ensure that users can easily find the information they need and navigate between pages.
 
-  1. Users can navigate to any section by using the sticky header navigation.
-  2. Users can navigate to any god description by clicking on the god card.
+  1. Users can navigate to any page by using the header navigation.
+  1. Users can navigate to any trivia section by either selecting the wheel segment or clicking on the category name.
 
 - I want to test the site's performance and loading speed, to ensure that it can handle a high volume of traffic and provide a smooth user experience.
 
@@ -473,10 +473,10 @@ The website was tested on the following browsers:
   2. Site is usable across all different browsers.
   3. Site passes all testing for accessibility.
 
-- I want users to be able to contact me directly and sign up to subscription services.
+- I want users to be able to contact me directly to offer feedback or keep in touch with my latest work.
 
-  1. Working contact email as well as direct linking to social platforms.
-  2. Subscription form works and shows users a success page.
+  1. Working contact email as well as direct linking to social platforms located on footer of each page.
+  2. Clearly legiable name with trade marked website located on footer
 
 - I want to make sure users are directed back to the index page of the website and not rely on the browser navigation to return to the home page.
   1. 404 page instructs the user the page doesn't exist and directs them back to the home page with a navigation button on the both header and below 404 text.
@@ -485,56 +485,31 @@ The website was tested on the following browsers:
 
 - I want to immediately understand the content of the site so I can make a quick decision as to whether or not to continue.
 
-  1. Hero text clearly states the purpose of the website
-  2. First heading reinforces the context of the website.
+  1. Clean UI with large image of wheel to show the context of the trivia game website (similar to trivial pursuit).
+  2. Clear categories so users can see what they are answering questions on.
 
 - I want to be able to quickly navigate to desired areas of the website and find the information displayed clearly and concisely.
 
-  1. Sticky navigation shows the key areas of the website.
-  2. Clear and concise paragraphs outline the important points of each god. The who, what and where are all covered.
-
-- I want to have multiple media sources displayed on the website I can get a comprehensive outlook on the information I require
-
-  1. Youtube video media embedding an informative video
-  2. Links to articles describing information in more detail
-  3. High quality images and artist renditions of the mythical gods
-  4. Map embedded to show location of the source material
+  1. Heading navigation on each page.
+  2. Clean and presentable UI that makes the questions easy to answer and read.
+  3. Images for each category that are relatable.
+  4. Trump cards and medals to show users progress
 
 #### Existing Users:
 
-- I want to be able to sign up to a mailing list on the website so as to get alerts about future content.
+- I want them to be able to check the current progression by tracking medals and trophy cards.
 
-  1. Mailing list form at the end of the page allows users to input their details.
-  2. Choice of subscription gives the user control of the frequency of articles delivered.
-  3. Success page is routed to upon completion of the form giving user feedback.
+  1. Medals for each category difficulty mode completed
+  2. Success page is routed to upon completion of the form giving user feedback.
 
-- I want to locate the contact details of the website owner so I can request assistance.
-
-  1. Contact details located on the footer of the page show both the email, address, name and socials of the owner.
-
-- I want to locate the contact details of the website owner so I can request assistance.
-  1. Contact details located on the footer of the page show both the email, address, name and socials of the owner.
+- I want the questions to be unique and randomly generated.
+  1. Use of Open Trivia API guarentees the quality of the questions.
 
 [Back to Table of Contents](#table-of-contents)
 
 ## Bugs
 
-### MAJOR COMMIT ISSUE BUG SCREEN SHOTS
-
-#### Total Commits
-
-![Total Commits](documentation/bugs/commit-1.webp)
-
-#### Registered Commits
-
-![Registered Commits](documentation/bugs/commit-2.webp)
-
-| **Bug**                                                                                                                                                                                                                                                                             | **Fix**                                                                                                                                                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| MAJOR BUG: COMMIT ISSUES - building this project was done using local VSCODE and the Live server extension. Files were then transfered to Gitpod to be pushed to repo. This was to avoid going over 50 hours. Difficulties pushing from local VS-Code meant this approach was used. | Bug not fixed. Unknown why all commits were not tracked. From the main screen commits are recorded but not listed on project repo commit total. Perhaps this was due to transfering files from local VS-Code to gitpod for commiting and pushing to repo. |
-| Due to the hero image animation using CSS background url the image was unable to be optimised. This leads to high load times and poor performance.                                                                                                                                  | Using CSS media queries the hero image was disabled on mobile devices leading to better performance and lighthouse scores.                                                                                                                                |
-| Embedding youtube videos and lead to large delays in performance. Reduce unused JavaScript, Javascript execution times and serving static assets were issues.                                                                                                                       | Following the tutorial on [Vumbnail](https://vumbnail.com/examples/srcdoc-iframe-for-lighthouse) I was able to drastically reduce performance issues by following the instructional srcdoc html setup.                                                    |
-| Embedding Google Maps meant the certain errors were not able to be resolved. These were serving static assets with an efficient cache policy.                                                                                                                                       | Unfortunately no reasonable solution was found and this is a common error when embedding google maps. Without use of custom Javascript code which is beyond the scope of this project.                                                                    |
+1. As of testing no bugs have been found. All bugs have been addressed via testing and consistant use of sites multiple features.
 
 [Back to Table of Contents](#table-of-contents)
 
@@ -578,14 +553,6 @@ You can run this repository locally:
 ### Images
 
 - All Category Images by [FlatIcon](https://www.flaticon.com/icons)
-    <details><summary>Hero Background</summary>
-    <img src="assets/images/hero-background.webp">
-    </details>
-
-- [Medal Images](https://www.hiclipart.com/free-transparent-background-png-clipart-pwwor) by [HiClipArt](www.hiclipart.com)
-  <details><summary>Hero Image</summary>
-  <img src="assets/images/12olympians.webp">
-  </details>
 
 ### Icons
 

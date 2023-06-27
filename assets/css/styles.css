@@ -280,15 +280,54 @@ main {
 }
 
 .category-link {
+  color: black;
   font-size: large;
   font-weight: bold;
 }
 
 .category-link:hover,
 .category-link:focus {
-  filter: hue-rotate(180deg);
   text-decoration: underline;
-  transition: 300ms;
+}
+
+.category-score-list li:nth-child(1) a:hover,
+.category-score-list li:nth-child(1) a:focus {
+  color: var(--pink);
+}
+
+.category-score-list li:nth-child(2) a:hover,
+.category-score-list li:nth-child(2) a:focus {
+  color: var(--red);
+}
+
+.category-score-list li:nth-child(3) a:hover,
+.category-score-list li:nth-child(3) a:focus {
+  color: var(--green);
+}
+
+.category-score-list li:nth-child(4) a:hover,
+.category-score-list li:nth-child(4) a:focus {
+  color: var(--blue);
+}
+
+.category-score-list li:nth-child(5) a:hover,
+.category-score-list li:nth-child(5) a:focus {
+  color: var(--purple);
+}
+
+.category-score-list li:nth-child(6) a:hover,
+.category-score-list li:nth-child(6) a:focus {
+  color: var(--orange);
+}
+
+.category-score-list li:nth-child(7) a:hover,
+.category-score-list li:nth-child(7) a:focus {
+  color: var(--sky);
+}
+
+.category-score-list li:nth-child(8) a:hover,
+.category-score-list li:nth-child(8) a:focus {
+  color: var(--yellow);
 }
 
 .score-box {
