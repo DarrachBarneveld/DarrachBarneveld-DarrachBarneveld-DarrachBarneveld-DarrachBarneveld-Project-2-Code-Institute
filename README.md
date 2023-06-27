@@ -383,7 +383,8 @@ The following features could be implemented in the future but are beyond the sco
 Validator W3 was used to validate the HTML of the website. All pages pass with no errors and no warnings shown.
 
 - index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-2-Code-Institute%2F)
-- game.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-1-Code-Institute%2Fsuccess)
+- game.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-2-Code-Institute%2Fgame.html%3Fmusic)
+- trophy.html results [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-2-Code-Institute%2Ftrophies.html)
 - 404.html results [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-2-Code-Institute%2F404)
 
 ### CSS Validation
@@ -397,8 +398,9 @@ The W3C Jigsaw CSS Validation Service was used to validate the CSS of the websit
 The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
 
 - index.html [results](https://wave.webaim.org/report#/https://darrachbarneveld.github.io/Project-2-Code-Institute/)
-- success.html [results](https://wave.webaim.org/report#/https://darrachbarneveld.github.io/Project-1-Code-Institute/success)
-- 404.html results [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdarrachbarneveld.github.io%2FProject-2-Code-Institute%2F404&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- game.html [results](https://wave.webaim.org/report#/https://darrachbarneveld.github.io/Project-2-Code-Institute/game.html?music)
+- trophy.html results [results](https://wave.webaim.org/report#/https://darrachbarneveld.github.io/Project-2-Code-Institute/trophies.html)
+- 404.html results [results](https://wave.webaim.org/report#/https://darrachbarneveld.github.io/Project-2-Code-Institute/lol)
 
 ### Performance
 
@@ -416,10 +418,19 @@ Google Lighthouse in Google's Chrome Developer Tools was used to test the perfor
 ### Game
 
 <details><summary>Desktop</summary> 
-<img src="documentation/performance/index-desktop.webp">
+<img src="documentation/testing/game-desktop-lighthouse.png">
 </details>
 <details><summary>Mobile</summary>
-<img src="documentation/performance/index-mobile.webp">
+<img src="documentation/testing/game-mobile-lighthouse.png">
+</details>
+
+### Trophies
+
+<details><summary>Desktop</summary> 
+<img src="documentation/testing/game-trophy-lighthouse.png">
+</details>
+<details><summary>Mobile</summary>
+<img src="documentation/testing/game-trophy-lighthouse.png">
 </details>
 
 ### 404
