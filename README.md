@@ -427,10 +427,10 @@ Google Lighthouse in Google's Chrome Developer Tools was used to test the perfor
 ### Trophies
 
 <details><summary>Desktop</summary> 
-<img src="documentation/testing/game-trophy-lighthouse.png">
+<img src="documentation/testing/trophy-desktop-lighthouse.png">
 </details>
 <details><summary>Mobile</summary>
-<img src="documentation/testing/game-trophy-lighthouse.png">
+<img src="documentation/testing/trophy-mobile-lighthouse.png">
 </details>
 
 ### 404
@@ -472,7 +472,7 @@ The website was tested on the following browsers:
 - I want to test the site's usability and navigation, to ensure that users can easily find the information they need and navigate between pages.
 
   1. Users can navigate to any page by using the header navigation.
-  1. Users can navigate to any trivia section by either selecting the wheel segment or clicking on the category name.
+  2. Users can navigate to any trivia section by either selecting the wheel segment or clicking on the category name.
 
 - I want to test the site's performance and loading speed, to ensure that it can handle a high volume of traffic and provide a smooth user experience.
 
@@ -490,7 +490,14 @@ The website was tested on the following browsers:
   2. Clearly legiable name with trade marked website located on footer
 
 - I want to make sure users are directed back to the index page of the website and not rely on the browser navigation to return to the home page.
+
   1. 404 page instructs the user the page doesn't exist and directs them back to the home page with a navigation button on the both header and below 404 text.
+
+- I want the site to be addictive and fun so users return consistantly
+
+1. Use of bold and bright colours to trigger the users interaction
+2. Engaging and a wide array of questions to keep the user interested
+3. Scoring system and trophies to trigger user completion
 
 #### New Users:
 
