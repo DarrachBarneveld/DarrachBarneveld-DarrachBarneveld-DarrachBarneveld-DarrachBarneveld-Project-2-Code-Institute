@@ -393,7 +393,8 @@ main {
 
 .badge {
   width: 30%;
-  max-width: 300px;
+  max-width: 100px;
+  height: auto;
 }
 
 .icon-container {
